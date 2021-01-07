@@ -5,7 +5,7 @@ Begin VB.Form FormMainWindow
    AutoRedraw      =   -1  'True
    BackColor       =   &H00D0D0D0&
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Timer+Lottery　v8.20　by Sam Toki"
+   Caption         =   "Timer+Lottery　v8.30　by Sam Toki"
    ClientHeight    =   7890
    ClientLeft      =   45
    ClientTop       =   750
@@ -1328,10 +1328,10 @@ Begin VB.Form FormMainWindow
          Caption         =   "Timer+Lottery"
       End
       Begin VB.Menu MenuAboutVersion 
-         Caption         =   "v8.20 Release Version　|　for Windows 7,8,10　|　English (US)"
+         Caption         =   "v8.30 Release Version　|　for Windows 7,8,10　|　English (US)"
       End
       Begin VB.Menu MenuAboutDate 
-         Caption         =   "Last compiled on Fri, Sep 25, 2020"
+         Caption         =   "Last compiled on Thu, Jan 7, 2021"
       End
       Begin VB.Menu MenuAboutFirst 
          Caption         =   "First version built on Fri, Mar 24, 2017"
@@ -1355,7 +1355,7 @@ Begin VB.Form FormMainWindow
          Caption         =   "-"
       End
       Begin VB.Menu MenuAboutCopyright 
-         Caption         =   "TM �� (C) 2015-2020 SAM TOKI STUDIO. All rights reserved."
+         Caption         =   "TM && (C) 2015-2021 SAM TOKI STUDIO. All rights reserved."
       End
       Begin VB.Menu MenuAboutTrademark 
          Caption         =   "SAM TOKI STUDIO is a trademark of CZJ Software Technologies (CZJST) Inc. in the P.R.C and other countries."
@@ -2020,7 +2020,7 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
         If soundswitch = False Then Exit Sub
         Select Case lotterytoneswitch
             Case True
-                WindowsMediaPlayer1.URL = App.Path & "\CZJST_appdata\CZJST_audio\CZJSTaudio_HaiyoreNyarukosanA.wav"
+                WindowsMediaPlayer1.URL = App.Path & "\CZJST_appdata\CZJST_audio\CZJSTaudio_DiceRoll[Long].wav"
             Case False
                 WindowsMediaPlayer1.URL = ""
         End Select

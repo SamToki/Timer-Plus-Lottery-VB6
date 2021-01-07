@@ -209,7 +209,7 @@ Public windowanimationtargetheight As Integer
 
     Public Sub TimerExpiredTimeCount_Timer()
         If FormMainWindow.timerexpiredsec <= 99999 Then FormMainWindow.timerexpiredsec = FormMainWindow.timerexpiredsec + 1
-        If FormMainWindow.timerexpiredsec Mod 5 = 1 Then Call TimerRingtonePlayer  'repeat playing timer tone
+        If FormMainWindow.timerexpiredsec Mod 10 = 1 Then Call TimerRingtonePlayer  'repeat playing timer tone
         LabelExpiredTime.Caption = "Expired " & FormMainWindow.timerexpiredsec & " sec."
     End Sub
     
@@ -241,7 +241,7 @@ Public windowanimationtargetheight As Integer
         If FormMainWindow.soundswitch = False Then Exit Sub
         Select Case FormMainWindow.timertoneswitch
             Case True
-                WindowsMediaPlayer1.URL = App.Path & "\CZJST_appdata\CZJST_audio\CZJSTaudio_HaiyoreNyarukosanW.wav"
+                WindowsMediaPlayer1.URL = App.Path & "\CZJST_appdata\CZJST_audio\CZJSTaudio_TimerTimeUp[Long].wav"
             Case False
                 WindowsMediaPlayer1.URL = ""
         End Select
