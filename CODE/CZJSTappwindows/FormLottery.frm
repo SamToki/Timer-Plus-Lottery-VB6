@@ -2,7 +2,7 @@ VERSION 5.00
 Begin VB.Form FormLottery 
    Appearance      =   0  'Flat
    AutoRedraw      =   -1  'True
-   BackColor       =   &H00E0E0E0&
+   BackColor       =   &H00F0F0F0&
    BorderStyle     =   0  'None
    Caption         =   "Timer+Lottery"
    ClientHeight    =   4005
@@ -33,7 +33,7 @@ Begin VB.Form FormLottery
    StartUpPosition =   2  'ÆÁÄ»ÖÐÐÄ
    Begin VB.CommandButton CmdCancel 
       Cancel          =   -1  'True
-      Caption         =   "Cancel"
+      Caption         =   "X"
       Default         =   -1  'True
       BeginProperty Font 
          Name            =   "Avenir Next LT Pro"
@@ -45,12 +45,12 @@ Begin VB.Form FormLottery
          Strikethrough   =   0   'False
       EndProperty
       Height          =   855
-      Left            =   10395
+      Left            =   14070
       MouseIcon       =   "FormLottery.frx":0E04
       MousePointer    =   99  'Custom
       TabIndex        =   4
       Top             =   2730
-      Width           =   4530
+      Width           =   855
    End
    Begin VB.Timer TimerScroll 
       Enabled         =   0   'False
@@ -66,7 +66,7 @@ Begin VB.Form FormLottery
    End
    Begin VB.PictureBox PictureboxScroll 
       Appearance      =   0  'Flat
-      BackColor       =   &H00E0E0E0&
+      BackColor       =   &H00F0F0F0&
       BorderStyle     =   0  'None
       FillColor       =   &H000000FF&
       BeginProperty Font 
@@ -123,12 +123,12 @@ Begin VB.Form FormLottery
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H00FF6600&
+      ForeColor       =   &H00FF9000&
       Height          =   1230
       Left            =   210
       TabIndex        =   3
       Top             =   2400
-      Width           =   9900
+      Width           =   12000
    End
    Begin VB.Label LabelAppTitle 
       Appearance      =   0  'Flat

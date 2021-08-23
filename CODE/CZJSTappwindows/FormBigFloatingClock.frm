@@ -396,7 +396,7 @@ Public windowanimationtargetheight As Integer
     End Sub
     Public Sub LabelMin_DblClick()
         FormMainWindow.bigfloatingclockswitch = True
-        Call FormMainWindow.MenuExtrasBigFloatingClock_Click
+        Call FormMainWindow.MenuExtrasBigFloatingClockSwitch_Click
     End Sub
 
 '[] MOUSEMOVE []

@@ -511,7 +511,7 @@ Begin VB.Form FormSettings
    End
    Begin VB.CommandButton CmdClose 
       Cancel          =   -1  'True
-      Caption         =   "Done"
+      Caption         =   "X"
       Default         =   -1  'True
       BeginProperty Font 
          Name            =   "Avenir Next LT Pro"
@@ -523,12 +523,12 @@ Begin VB.Form FormSettings
          Strikethrough   =   0   'False
       EndProperty
       Height          =   645
-      Left            =   11235
+      Left            =   12075
       MouseIcon       =   "FormSettings.frx":2F06
       MousePointer    =   99  'Custom
       TabIndex        =   1
       Top             =   210
-      Width           =   1485
+      Width           =   645
    End
    Begin VB.Frame FrameLottery 
       Appearance      =   0  'Flat
@@ -581,7 +581,7 @@ Begin VB.Form FormSettings
       Appearance      =   0  'Flat
       BackColor       =   &H000000FF&
       BackStyle       =   0  'Transparent
-      Caption         =   "SETTINGS"
+      Caption         =   "Settings"
       BeginProperty Font 
          Name            =   "Avenir Next LT Pro"
          Size            =   24
@@ -651,16 +651,16 @@ Public windowanimationtargetheight As Integer
             Case True
                 FormMainWindow.lotterywindowdarkthemeswitch = False
                 CheckboxLotteryDarkTheme.Value = 0
-                FormLottery.BackColor = &HE0E0E0
-                FormLottery.PictureboxScroll.BackColor = &HE0E0E0
-                FormLottery.LabelHintText.ForeColor = &HFF6600
+                FormLottery.BackColor = &HF0F0F0
+                FormLottery.PictureboxScroll.BackColor = &HF0F0F0
+                FormLottery.LabelHintText.ForeColor = &HFF9000
                 FormLottery.LabelScrollText.ForeColor = &H0
             Case False
                 FormMainWindow.lotterywindowdarkthemeswitch = True
                 CheckboxLotteryDarkTheme.Value = 1
                 FormLottery.BackColor = &H0
                 FormLottery.PictureboxScroll.BackColor = &H0
-                FormLottery.LabelHintText.ForeColor = &HFFAA00
+                FormLottery.LabelHintText.ForeColor = &HFF9000
                 FormLottery.LabelScrollText.ForeColor = &HFFFFFF
         End Select
     End Sub
@@ -715,7 +715,7 @@ Public windowanimationtargetheight As Integer
         Call FormBigFloatingClock.TimerBigFloatingClockClock_Timer
     End Sub
     Public Sub HScrollBigFloatingClockPositionX_Change()
-        If FormMainWindow.bigfloatingclockswitch = False Then Call FormMainWindow.MenuExtrasBigFloatingClock_Click  'Force show effect...
+        If FormMainWindow.bigfloatingclockswitch = False Then Call FormMainWindow.MenuExtrasBigFloatingClockSwitch_Click  'Force show effect...
         FormBigFloatingClock.windowanimationtargetleft = (HScrollBigFloatingClockPositionX.Value / 1000) * (Screen.Width - 3060)
         FormBigFloatingClock.windowanimationtargettop = (VScrollBigFloatingClockPositionY.Value / 1000) * (Screen.Height - 1485)
     End Sub

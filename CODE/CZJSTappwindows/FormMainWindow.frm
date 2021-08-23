@@ -5,7 +5,7 @@ Begin VB.Form FormMainWindow
    AutoRedraw      =   -1  'True
    BackColor       =   &H00D0D0D0&
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Timer+Lottery　v8.30　by Sam Toki"
+   Caption         =   "Timer+Lottery v8.32eng"
    ClientHeight    =   7890
    ClientLeft      =   45
    ClientTop       =   750
@@ -32,81 +32,73 @@ Begin VB.Form FormMainWindow
    Begin VB.CommandButton CmdEXIT 
       Cancel          =   -1  'True
       Caption         =   "EXIT"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   435
-      Left            =   13545
+      Left            =   13650
       MouseIcon       =   "FormMainWindow.frx":0E04
+      MousePointer    =   99  'Custom
+      TabIndex        =   8
+      Top             =   210
+      Width           =   1380
+   End
+   Begin VB.CommandButton CmdSettings 
+      Caption         =   "Settings..."
+      Height          =   435
+      Left            =   12285
+      MouseIcon       =   "FormMainWindow.frx":0F56
       MousePointer    =   99  'Custom
       TabIndex        =   7
       Top             =   210
-      Width           =   1485
+      Width           =   1380
    End
    Begin VB.CommandButton CmdRestartComputer 
       Caption         =   "Restart"
       Height          =   435
-      Left            =   11760
-      MouseIcon       =   "FormMainWindow.frx":0F56
+      Left            =   10815
+      MouseIcon       =   "FormMainWindow.frx":10A8
       MousePointer    =   99  'Custom
       TabIndex        =   6
       ToolTipText     =   "Restart Computer"
       Top             =   210
-      Width           =   1590
+      Width           =   1275
    End
    Begin VB.CommandButton CmdShutDownComputer 
       Caption         =   "Shut Down"
       Height          =   435
-      Left            =   10185
-      MouseIcon       =   "FormMainWindow.frx":10A8
+      Left            =   9555
+      MouseIcon       =   "FormMainWindow.frx":11FA
       MousePointer    =   99  'Custom
       TabIndex        =   5
       ToolTipText     =   "Shut Down Computer"
       Top             =   210
-      Width           =   1590
+      Width           =   1275
    End
    Begin VB.CommandButton CmdLockCurrentUser 
       Caption         =   "Lock"
       Height          =   435
-      Left            =   8610
-      MouseIcon       =   "FormMainWindow.frx":11FA
+      Left            =   8295
+      MouseIcon       =   "FormMainWindow.frx":134C
       MousePointer    =   99  'Custom
       TabIndex        =   4
       ToolTipText     =   "Lock Current User"
       Top             =   210
-      Width           =   1590
+      Width           =   1275
    End
    Begin VB.CommandButton CmdRunWindowsCalculator 
       Caption         =   "Calculator"
       Height          =   435
       Left            =   7035
-      MouseIcon       =   "FormMainWindow.frx":134C
+      MouseIcon       =   "FormMainWindow.frx":149E
       MousePointer    =   99  'Custom
       TabIndex        =   3
       ToolTipText     =   "Run Windows Calculator"
       Top             =   210
-      Width           =   1590
+      Width           =   1275
    End
    Begin VB.CommandButton CmdBigFloatingClockSwitch 
       Caption         =   "Big Clock: OFF"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   435
       Left            =   4620
-      MouseIcon       =   "FormMainWindow.frx":149E
+      MouseIcon       =   "FormMainWindow.frx":15F0
       MousePointer    =   99  'Custom
       TabIndex        =   2
       Top             =   210
@@ -114,18 +106,9 @@ Begin VB.Form FormMainWindow
    End
    Begin VB.CommandButton CmdSoundSwitch 
       Caption         =   "Sound: ON"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   435
       Left            =   2415
-      MouseIcon       =   "FormMainWindow.frx":15F0
+      MouseIcon       =   "FormMainWindow.frx":1742
       MousePointer    =   99  'Custom
       TabIndex        =   1
       Top             =   210
@@ -133,18 +116,9 @@ Begin VB.Form FormMainWindow
    End
    Begin VB.CommandButton CmdMiniMode 
       Caption         =   "Mini Mode"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   700
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   435
       Left            =   210
-      MouseIcon       =   "FormMainWindow.frx":1742
+      MouseIcon       =   "FormMainWindow.frx":1894
       MousePointer    =   99  'Custom
       TabIndex        =   0
       Top             =   210
@@ -166,10 +140,10 @@ Begin VB.Form FormMainWindow
       ForeColor       =   &H00000000&
       Height          =   6740
       Left            =   210
-      TabIndex        =   8
+      TabIndex        =   9
       Top             =   840
       Width           =   6630
-      Begin VB.CheckBox CheckboxShutdownWhenTimerEnds 
+      Begin VB.CheckBox CheckboxShutdownWhenTimerEndsSwitch 
          Appearance      =   0  'Flat
          BackColor       =   &H00E0E0E0&
          Caption         =   "Shut down computer when time is up"
@@ -177,9 +151,9 @@ Begin VB.Form FormMainWindow
          Height          =   330
          Left            =   1050
          MaskColor       =   &H000000FF&
-         MouseIcon       =   "FormMainWindow.frx":1894
+         MouseIcon       =   "FormMainWindow.frx":19E6
          MousePointer    =   99  'Custom
-         TabIndex        =   13
+         TabIndex        =   14
          Top             =   2415
          Width           =   4320
       End
@@ -201,9 +175,9 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   540
          Left            =   3360
-         MouseIcon       =   "FormMainWindow.frx":19E6
+         MouseIcon       =   "FormMainWindow.frx":1B38
          MousePointer    =   99  'Custom
-         TabIndex        =   26
+         TabIndex        =   27
          Top             =   5775
          Width           =   2010
       End
@@ -220,9 +194,9 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   540
          Left            =   3360
-         MouseIcon       =   "FormMainWindow.frx":1B38
+         MouseIcon       =   "FormMainWindow.frx":1C8A
          MousePointer    =   99  'Custom
-         TabIndex        =   25
+         TabIndex        =   26
          Top             =   5040
          Width           =   2010
       End
@@ -239,9 +213,9 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   1275
          Left            =   1050
-         MouseIcon       =   "FormMainWindow.frx":1C8A
+         MouseIcon       =   "FormMainWindow.frx":1DDC
          MousePointer    =   99  'Custom
-         TabIndex        =   24
+         TabIndex        =   25
          Top             =   5040
          Width           =   2010
       End
@@ -251,16 +225,16 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
          Height          =   435
          Left            =   3675
-         MouseIcon       =   "FormMainWindow.frx":1DDC
+         MouseIcon       =   "FormMainWindow.frx":1F2E
          MousePointer    =   99  'Custom
-         TabIndex        =   23
+         TabIndex        =   24
          Top             =   4305
          Width           =   1695
       End
@@ -277,9 +251,9 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   435
          Left            =   4515
-         MouseIcon       =   "FormMainWindow.frx":1F2E
+         MouseIcon       =   "FormMainWindow.frx":2080
          MousePointer    =   99  'Custom
-         TabIndex        =   22
+         TabIndex        =   23
          Top             =   3885
          Width           =   855
       End
@@ -289,16 +263,16 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
          Height          =   435
          Left            =   1050
-         MouseIcon       =   "FormMainWindow.frx":2080
+         MouseIcon       =   "FormMainWindow.frx":21D2
          MousePointer    =   99  'Custom
-         TabIndex        =   18
+         TabIndex        =   19
          Top             =   4305
          Width           =   1695
       End
@@ -315,9 +289,9 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   435
          Left            =   1890
-         MouseIcon       =   "FormMainWindow.frx":21D2
+         MouseIcon       =   "FormMainWindow.frx":2324
          MousePointer    =   99  'Custom
-         TabIndex        =   17
+         TabIndex        =   18
          Top             =   3885
          Width           =   855
       End
@@ -334,9 +308,9 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   435
          Left            =   3675
-         MouseIcon       =   "FormMainWindow.frx":2324
+         MouseIcon       =   "FormMainWindow.frx":2476
          MousePointer    =   99  'Custom
-         TabIndex        =   21
+         TabIndex        =   22
          Top             =   3885
          Width           =   855
       End
@@ -353,9 +327,9 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   435
          Left            =   1050
-         MouseIcon       =   "FormMainWindow.frx":2476
+         MouseIcon       =   "FormMainWindow.frx":25C8
          MousePointer    =   99  'Custom
-         TabIndex        =   16
+         TabIndex        =   17
          Top             =   3885
          Width           =   855
       End
@@ -365,16 +339,16 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
          Height          =   435
          Left            =   3675
-         MouseIcon       =   "FormMainWindow.frx":25C8
+         MouseIcon       =   "FormMainWindow.frx":271A
          MousePointer    =   99  'Custom
-         TabIndex        =   20
+         TabIndex        =   21
          Top             =   3465
          Width           =   1695
       End
@@ -384,16 +358,16 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
          Height          =   435
          Left            =   1050
-         MouseIcon       =   "FormMainWindow.frx":271A
+         MouseIcon       =   "FormMainWindow.frx":286C
          MousePointer    =   99  'Custom
-         TabIndex        =   15
+         TabIndex        =   16
          Top             =   3465
          Width           =   1695
       End
@@ -403,16 +377,16 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
          Height          =   435
          Left            =   3675
-         MouseIcon       =   "FormMainWindow.frx":286C
+         MouseIcon       =   "FormMainWindow.frx":29BE
          MousePointer    =   99  'Custom
-         TabIndex        =   19
+         TabIndex        =   20
          Top             =   2940
          Width           =   1695
       End
@@ -422,16 +396,16 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
          Height          =   435
          Left            =   1050
-         MouseIcon       =   "FormMainWindow.frx":29BE
+         MouseIcon       =   "FormMainWindow.frx":2B10
          MousePointer    =   99  'Custom
-         TabIndex        =   14
+         TabIndex        =   15
          Top             =   2940
          Width           =   1695
       End
@@ -453,7 +427,7 @@ Begin VB.Form FormMainWindow
          ForeColor       =   &H00000000&
          Height          =   1425
          Left            =   2835
-         TabIndex        =   10
+         TabIndex        =   11
          Top             =   340
          Width           =   780
       End
@@ -474,7 +448,7 @@ Begin VB.Form FormMainWindow
          ForeColor       =   &H00000000&
          Height          =   1425
          Left            =   3570
-         TabIndex        =   11
+         TabIndex        =   12
          Top             =   480
          Width           =   1725
       End
@@ -496,14 +470,14 @@ Begin VB.Form FormMainWindow
          ForeColor       =   &H00000000&
          Height          =   1425
          Left            =   315
-         TabIndex        =   9
+         TabIndex        =   10
          Top             =   480
          Width           =   2565
       End
       Begin VB.Shape ShapeLightTimer 
-         BackColor       =   &H00666666&
+         BackColor       =   &H00707070&
          BackStyle       =   1  'Opaque
-         BorderColor     =   &H00C0FFC0&
+         BorderColor     =   &H00D0FFD0&
          BorderStyle     =   0  'Transparent
          FillColor       =   &H0000FF00&
          Height          =   330
@@ -521,7 +495,7 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
@@ -529,9 +503,9 @@ Begin VB.Form FormMainWindow
          ForeColor       =   &H00000000&
          Height          =   375
          Left            =   1050
-         TabIndex        =   12
+         TabIndex        =   13
          Top             =   1995
-         Width           =   4875
+         Width           =   4320
       End
    End
    Begin VB.Frame FrameLottery 
@@ -550,7 +524,7 @@ Begin VB.Form FormMainWindow
       ForeColor       =   &H00000000&
       Height          =   6740
       Left            =   7035
-      TabIndex        =   27
+      TabIndex        =   28
       Top             =   840
       Width           =   7995
       Begin VB.CommandButton CmdLotteryRepeatTenTimes 
@@ -566,9 +540,9 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   750
          Left            =   315
-         MouseIcon       =   "FormMainWindow.frx":2B10
+         MouseIcon       =   "FormMainWindow.frx":2C62
          MousePointer    =   99  'Custom
-         TabIndex        =   55
+         TabIndex        =   56
          Top             =   5565
          Width           =   7365
       End
@@ -586,47 +560,29 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   750
          Left            =   315
-         MouseIcon       =   "FormMainWindow.frx":2C62
+         MouseIcon       =   "FormMainWindow.frx":2DB4
          MousePointer    =   99  'Custom
-         TabIndex        =   54
+         TabIndex        =   55
          Top             =   4515
          Width           =   7365
       End
       Begin VB.CommandButton CmdLotteryGroupSwitch 
          Caption         =   "OFF"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
          Height          =   435
          Left            =   3150
-         MouseIcon       =   "FormMainWindow.frx":2DB4
+         MouseIcon       =   "FormMainWindow.frx":2F06
          MousePointer    =   99  'Custom
-         TabIndex        =   47
+         TabIndex        =   48
          Top             =   2900
          Width           =   1275
       End
       Begin VB.CommandButton CmdLotteryGroupInput 
          Caption         =   "Enter..."
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
          Height          =   435
          Left            =   5880
-         MouseIcon       =   "FormMainWindow.frx":2F06
+         MouseIcon       =   "FormMainWindow.frx":3058
          MousePointer    =   99  'Custom
-         TabIndex        =   53
+         TabIndex        =   54
          Top             =   3570
          Width           =   960
       End
@@ -636,16 +592,16 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
          Height          =   435
          Left            =   5040
-         MouseIcon       =   "FormMainWindow.frx":3058
+         MouseIcon       =   "FormMainWindow.frx":31AA
          MousePointer    =   99  'Custom
-         TabIndex        =   52
+         TabIndex        =   53
          Top             =   3570
          Width           =   645
       End
@@ -662,9 +618,9 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   435
          Left            =   4410
-         MouseIcon       =   "FormMainWindow.frx":31AA
+         MouseIcon       =   "FormMainWindow.frx":32FC
          MousePointer    =   99  'Custom
-         TabIndex        =   51
+         TabIndex        =   52
          Top             =   3570
          Width           =   645
       End
@@ -681,9 +637,9 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   435
          Left            =   3780
-         MouseIcon       =   "FormMainWindow.frx":32FC
+         MouseIcon       =   "FormMainWindow.frx":344E
          MousePointer    =   99  'Custom
-         TabIndex        =   50
+         TabIndex        =   51
          Top             =   3570
          Width           =   645
       End
@@ -693,16 +649,16 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
          Height          =   435
          Left            =   3150
-         MouseIcon       =   "FormMainWindow.frx":344E
+         MouseIcon       =   "FormMainWindow.frx":35A0
          MousePointer    =   99  'Custom
-         TabIndex        =   49
+         TabIndex        =   50
          Top             =   3570
          Width           =   645
       End
@@ -714,7 +670,7 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
@@ -724,27 +680,18 @@ Begin VB.Form FormMainWindow
          Left            =   5040
          Locked          =   -1  'True
          MousePointer    =   3  'I-Beam
-         TabIndex        =   48
+         TabIndex        =   49
          Text            =   "4"
          Top             =   2940
          Width           =   1800
       End
       Begin VB.CommandButton CmdLotteryTotalInput 
          Caption         =   "Enter..."
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
          Height          =   435
          Left            =   5880
-         MouseIcon       =   "FormMainWindow.frx":35A0
+         MouseIcon       =   "FormMainWindow.frx":36F2
          MousePointer    =   99  'Custom
-         TabIndex        =   45
+         TabIndex        =   46
          Top             =   1575
          Width           =   960
       End
@@ -754,16 +701,16 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
          Height          =   435
          Left            =   5040
-         MouseIcon       =   "FormMainWindow.frx":36F2
+         MouseIcon       =   "FormMainWindow.frx":3844
          MousePointer    =   99  'Custom
-         TabIndex        =   44
+         TabIndex        =   45
          Top             =   1575
          Width           =   645
       End
@@ -780,9 +727,9 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   435
          Left            =   4410
-         MouseIcon       =   "FormMainWindow.frx":3844
+         MouseIcon       =   "FormMainWindow.frx":3996
          MousePointer    =   99  'Custom
-         TabIndex        =   43
+         TabIndex        =   44
          Top             =   1575
          Width           =   645
       End
@@ -799,9 +746,9 @@ Begin VB.Form FormMainWindow
          EndProperty
          Height          =   435
          Left            =   3780
-         MouseIcon       =   "FormMainWindow.frx":3996
+         MouseIcon       =   "FormMainWindow.frx":3AE8
          MousePointer    =   99  'Custom
-         TabIndex        =   42
+         TabIndex        =   43
          Top             =   1575
          Width           =   645
       End
@@ -811,16 +758,16 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
          EndProperty
          Height          =   435
          Left            =   3150
-         MouseIcon       =   "FormMainWindow.frx":3AE8
+         MouseIcon       =   "FormMainWindow.frx":3C3A
          MousePointer    =   99  'Custom
-         TabIndex        =   41
+         TabIndex        =   42
          Top             =   1575
          Width           =   645
       End
@@ -832,7 +779,7 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
@@ -842,7 +789,7 @@ Begin VB.Form FormMainWindow
          Left            =   5040
          Locked          =   -1  'True
          MousePointer    =   3  'I-Beam
-         TabIndex        =   40
+         TabIndex        =   41
          Text            =   "50"
          Top             =   1000
          Width           =   1800
@@ -870,7 +817,7 @@ Begin VB.Form FormMainWindow
          Left            =   315
          Locked          =   -1  'True
          MousePointer    =   3  'I-Beam
-         TabIndex        =   35
+         TabIndex        =   36
          Text            =   "0"
          Top             =   3000
          Width           =   2370
@@ -892,7 +839,7 @@ Begin VB.Form FormMainWindow
          Left            =   315
          Locked          =   -1  'True
          MousePointer    =   3  'I-Beam
-         TabIndex        =   37
+         TabIndex        =   38
          Text            =   "0"
          Top             =   3720
          Width           =   2370
@@ -914,7 +861,7 @@ Begin VB.Form FormMainWindow
          Left            =   315
          Locked          =   -1  'True
          MousePointer    =   3  'I-Beam
-         TabIndex        =   36
+         TabIndex        =   37
          Text            =   "0"
          Top             =   3360
          Width           =   2370
@@ -936,7 +883,7 @@ Begin VB.Form FormMainWindow
          Left            =   315
          Locked          =   -1  'True
          MousePointer    =   3  'I-Beam
-         TabIndex        =   34
+         TabIndex        =   35
          Text            =   "0"
          Top             =   2640
          Width           =   2370
@@ -958,7 +905,7 @@ Begin VB.Form FormMainWindow
          Left            =   315
          Locked          =   -1  'True
          MousePointer    =   3  'I-Beam
-         TabIndex        =   33
+         TabIndex        =   34
          Text            =   "0"
          Top             =   2280
          Width           =   2370
@@ -980,7 +927,7 @@ Begin VB.Form FormMainWindow
          Left            =   315
          Locked          =   -1  'True
          MousePointer    =   3  'I-Beam
-         TabIndex        =   32
+         TabIndex        =   33
          Text            =   "0"
          Top             =   1920
          Width           =   2370
@@ -1002,7 +949,7 @@ Begin VB.Form FormMainWindow
          Left            =   315
          Locked          =   -1  'True
          MousePointer    =   3  'I-Beam
-         TabIndex        =   31
+         TabIndex        =   32
          Text            =   "0"
          Top             =   1560
          Width           =   2370
@@ -1024,7 +971,7 @@ Begin VB.Form FormMainWindow
          Left            =   315
          Locked          =   -1  'True
          MousePointer    =   3  'I-Beam
-         TabIndex        =   30
+         TabIndex        =   31
          Text            =   "0"
          Top             =   1200
          Width           =   2370
@@ -1046,7 +993,7 @@ Begin VB.Form FormMainWindow
          Left            =   315
          Locked          =   -1  'True
          MousePointer    =   3  'I-Beam
-         TabIndex        =   29
+         TabIndex        =   30
          Text            =   "0"
          Top             =   840
          Width           =   2370
@@ -1068,15 +1015,15 @@ Begin VB.Form FormMainWindow
          Left            =   315
          Locked          =   -1  'True
          MousePointer    =   3  'I-Beam
-         TabIndex        =   28
+         TabIndex        =   29
          Text            =   "0"
          Top             =   480
          Width           =   2370
       End
       Begin VB.Shape ShapeLightLottery 
-         BackColor       =   &H00666666&
+         BackColor       =   &H00707070&
          BackStyle       =   1  'Opaque
-         BorderColor     =   &H00C0FFFF&
+         BorderColor     =   &H00D0FFFF&
          BorderStyle     =   0  'Transparent
          FillColor       =   &H0000FFFF&
          Height          =   330
@@ -1086,11 +1033,11 @@ Begin VB.Form FormMainWindow
          Width           =   330
       End
       Begin VB.Shape ShapeLightLotteryGroupSwitch 
-         BackColor       =   &H00666666&
+         BackColor       =   &H00707070&
          BackStyle       =   1  'Opaque
-         BorderColor     =   &H00FFCC22&
+         BorderColor     =   &H00FFD030&
          BorderStyle     =   0  'Transparent
-         FillColor       =   &H00FFAA00&
+         FillColor       =   &H00FF9000&
          Height          =   520
          Left            =   3105
          Top             =   2850
@@ -1105,7 +1052,7 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
@@ -1113,7 +1060,7 @@ Begin VB.Form FormMainWindow
          ForeColor       =   &H00000000&
          Height          =   375
          Left            =   3045
-         TabIndex        =   46
+         TabIndex        =   47
          Top             =   2380
          Width           =   2355
       End
@@ -1122,19 +1069,10 @@ Begin VB.Form FormMainWindow
          BackColor       =   &H000000FF&
          BackStyle       =   0  'Transparent
          Caption         =   "from 1 to"
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   700
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
          ForeColor       =   &H00000000&
          Height          =   375
          Left            =   3780
-         TabIndex        =   39
+         TabIndex        =   40
          Top             =   1050
          Width           =   1125
       End
@@ -1147,7 +1085,7 @@ Begin VB.Form FormMainWindow
             Name            =   "MS Sans Serif"
             Size            =   12
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
@@ -1155,7 +1093,7 @@ Begin VB.Form FormMainWindow
          ForeColor       =   &H00000000&
          Height          =   375
          Left            =   3045
-         TabIndex        =   38
+         TabIndex        =   39
          Top             =   525
          Width           =   2355
       End
@@ -1166,10 +1104,10 @@ Begin VB.Form FormMainWindow
       Top             =   0
    End
    Begin VB.Shape ShapeLightSoundSwitch 
-      BackColor       =   &H00666666&
+      BackColor       =   &H00707070&
       BackStyle       =   1  'Opaque
-      BorderColor     =   &H00FFCC22&
-      FillColor       =   &H00FFAA00&
+      BorderColor     =   &H00FFD030&
+      FillColor       =   &H00FF9000&
       FillStyle       =   0  'Solid
       Height          =   520
       Left            =   2370
@@ -1177,11 +1115,11 @@ Begin VB.Form FormMainWindow
       Width           =   2100
    End
    Begin VB.Shape ShapeLightBigFloatingClockSwitch 
-      BackColor       =   &H00666666&
+      BackColor       =   &H00707070&
       BackStyle       =   1  'Opaque
-      BorderColor     =   &H00FFCC22&
+      BorderColor     =   &H00FFD030&
       BorderStyle     =   0  'Transparent
-      FillColor       =   &H00FFAA00&
+      FillColor       =   &H00FF9000&
       Height          =   520
       Left            =   4580
       Top             =   160
@@ -1190,7 +1128,7 @@ Begin VB.Form FormMainWindow
    Begin WMPLibCtl.WindowsMediaPlayer WindowsMediaPlayer1 
       Height          =   420
       Left            =   2835
-      TabIndex        =   56
+      TabIndex        =   57
       Top             =   525
       Visible         =   0   'False
       Width           =   450
@@ -1220,186 +1158,120 @@ Begin VB.Form FormMainWindow
       _cx             =   794
       _cy             =   741
    End
-   Begin VB.Menu MenuTimer 
-      Caption         =   "&Timer"
-      Begin VB.Menu MenuTimerStartPauseResume 
-         Caption         =   "Start"
-         Shortcut        =   {F5}
-      End
-      Begin VB.Menu MenuTimerReset 
-         Caption         =   "Reset"
-         Shortcut        =   {F6}
-      End
-      Begin VB.Menu MenuTimerClear 
-         Caption         =   "Clear"
-         Shortcut        =   {DEL}
-      End
-      Begin VB.Menu MenuTimer1_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuTimerShutdownWhenTimerEnds 
-         Caption         =   "Shut down computer when time is up"
-         Enabled         =   0   'False
-      End
-   End
-   Begin VB.Menu MenuLottery 
-      Caption         =   "L&ottery"
-      Begin VB.Menu MenuLotteryStartLottery 
-         Caption         =   "Start Lottery"
-         Shortcut        =   {F7}
-      End
-      Begin VB.Menu MenuLotteryRepeatTenTimes 
-         Caption         =   "Repeat Ten Times"
-         Shortcut        =   {F8}
-      End
-      Begin VB.Menu MenuLottery1_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuLotteryGroupSwitch 
-         Caption         =   "Group Division"
-         Shortcut        =   {F9}
-      End
-      Begin VB.Menu MenuLottery2_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuLotteryClearHistory 
-         Caption         =   "Clear History"
-         Shortcut        =   +{DEL}
-      End
-   End
-   Begin VB.Menu MenuCtrlExtras 
-      Caption         =   "Options / &Extras"
-      Begin VB.Menu MenuExtrasMiniMode 
-         Caption         =   "Mini Mode"
+   Begin VB.Menu Menu 
+      Caption         =   "Menu"
+      Begin VB.Menu MenuSettings 
+         Caption         =   "Settings..."
          Shortcut        =   {F2}
       End
-      Begin VB.Menu MenuExtras1_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuExtrasSoundSwitch 
-         Caption         =   "Sound Switch"
-         Checked         =   -1  'True
-         Shortcut        =   {F3}
-      End
-      Begin VB.Menu MenuExtras2_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuExtrasBigFloatingClock 
-         Caption         =   "Big Floating Clock"
+      Begin VB.Menu MenuEXIT 
+         Caption         =   "EXIT"
          Shortcut        =   {F4}
       End
-      Begin VB.Menu MenuExtras3_ 
+      Begin VB.Menu Menu1_ 
          Caption         =   "-"
       End
-      Begin VB.Menu MenuExtrasRunWindowsCalculator 
-         Caption         =   "Run Windows Calculator"
-         Shortcut        =   ^{F2}
+      Begin VB.Menu MenuTimer 
+         Caption         =   "Timer"
+         Begin VB.Menu MenuTimerStartPauseResume 
+            Caption         =   "Start"
+            Shortcut        =   {F5}
+         End
+         Begin VB.Menu MenuTimerReset 
+            Caption         =   "Reset"
+            Shortcut        =   {F6}
+         End
+         Begin VB.Menu MenuTimerClear 
+            Caption         =   "Clear"
+            Shortcut        =   {F7}
+         End
+         Begin VB.Menu MenuTimer1_ 
+            Caption         =   "-"
+         End
+         Begin VB.Menu MenuTimerShutdownWhenTimerEndsSwitch 
+            Caption         =   "Shut down computer when time is up"
+            Enabled         =   0   'False
+            Shortcut        =   {F8}
+         End
       End
-      Begin VB.Menu MenuExtrasLockCurrentUser 
-         Caption         =   "Lock Current User"
-         Shortcut        =   ^{F3}
+      Begin VB.Menu MenuLottery 
+         Caption         =   "Lottery"
+         Begin VB.Menu MenuLotteryStartLottery 
+            Caption         =   "Start Lottery"
+            Shortcut        =   +{F5}
+         End
+         Begin VB.Menu MenuLotteryRepeatTenTimes 
+            Caption         =   "Repeat Ten Times"
+            Shortcut        =   +{F6}
+         End
+         Begin VB.Menu MenuLotteryClearHistory 
+            Caption         =   "Clear History"
+            Shortcut        =   +{F7}
+         End
+         Begin VB.Menu MenuLottery1_ 
+            Caption         =   "-"
+         End
+         Begin VB.Menu MenuLotteryGroupSwitch 
+            Caption         =   "Group Division"
+            Shortcut        =   +{F8}
+         End
       End
-      Begin VB.Menu MenuExtrasShutDownComputer 
-         Caption         =   "Shut Down Computer"
-         Shortcut        =   ^{F4}
+      Begin VB.Menu MenuExtras 
+         Caption         =   "Extras"
+         Begin VB.Menu MenuExtrasMiniMode 
+            Caption         =   "Mini Mode"
+            Shortcut        =   ^{F1}
+         End
+         Begin VB.Menu MenuExtrasSoundSwitch 
+            Caption         =   "Sound"
+            Checked         =   -1  'True
+            Shortcut        =   ^{F2}
+         End
+         Begin VB.Menu MenuExtrasBigFloatingClockSwitch 
+            Caption         =   "Big Floating Clock"
+            Shortcut        =   ^{F3}
+         End
+         Begin VB.Menu MenuExtras1_ 
+            Caption         =   "-"
+         End
+         Begin VB.Menu MenuExtrasRunWindowsCalculator 
+            Caption         =   "Run Windows Calculator"
+            Shortcut        =   ^{F5}
+         End
+         Begin VB.Menu MenuExtrasLockCurrentUser 
+            Caption         =   "Lock Current User"
+            Shortcut        =   ^{F6}
+         End
+         Begin VB.Menu MenuExtrasShutDownComputer 
+            Caption         =   "Shut Down Computer"
+            Shortcut        =   ^{F7}
+         End
+         Begin VB.Menu MenuExtrasRestartComputer 
+            Caption         =   "Restart Computer"
+            Shortcut        =   ^{F8}
+         End
+         Begin VB.Menu MenuExtras2_ 
+            Caption         =   "-"
+         End
+         Begin VB.Menu MenuExtrasHideMainWindow 
+            Caption         =   "Hide Main Window (Caution)"
+         End
       End
-      Begin VB.Menu MenuExtrasRestartComputer 
-         Caption         =   "Restart Computer"
-         Shortcut        =   ^{F5}
-      End
-      Begin VB.Menu MenuExtras4_ 
+      Begin VB.Menu Menu2_ 
          Caption         =   "-"
       End
-      Begin VB.Menu MenuExtrasHideMainWindow 
-         Caption         =   "Hide Main Window (Caution)"
-         Shortcut        =   {F12}
+      Begin VB.Menu MenuAbout 
+         Caption         =   "About"
+         Begin VB.Menu MenuAboutGitHub 
+            Caption         =   "GitHub @SamToki"
+         End
+         Begin VB.Menu MenuAboutLicense 
+            Caption         =   "Released under license GNU GPL v3"
+         End
+         Begin VB.Menu MenuAboutCopyright 
+            Caption         =   "TM && (C) 2015-2021 SAM TOKI STUDIO"
+         End
       End
-   End
-   Begin VB.Menu Menu1_ 
-      Caption         =   "　|　"
-      Enabled         =   0   'False
-   End
-   Begin VB.Menu MenuSettings 
-      Caption         =   "&Settings..."
-   End
-   Begin VB.Menu MenuAbout 
-      Caption         =   "&About"
-      Begin VB.Menu MenuAboutName 
-         Caption         =   "Timer+Lottery"
-      End
-      Begin VB.Menu MenuAboutVersion 
-         Caption         =   "v8.30 Release Version　|　for Windows 7,8,10　|　English (US)"
-      End
-      Begin VB.Menu MenuAboutDate 
-         Caption         =   "Last compiled on Thu, Jan 7, 2021"
-      End
-      Begin VB.Menu MenuAboutFirst 
-         Caption         =   "First version built on Fri, Mar 24, 2017"
-      End
-      Begin VB.Menu MenuAbout1_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuAboutAuthor 
-         Caption         =   "Author: Sam Toki"
-      End
-      Begin VB.Menu MenuAboutOrganization 
-         Caption         =   "Organization: SAM TOKI STUDIO"
-      End
-      Begin VB.Menu MenuAboutFrom 
-         Caption         =   "From: Xidian University, China"
-      End
-      Begin VB.Menu MenuAboutContact 
-         Caption         =   "Contact: SamToki@outlook.com"
-      End
-      Begin VB.Menu MenuAbout2_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuAboutCopyright 
-         Caption         =   "TM && (C) 2015-2021 SAM TOKI STUDIO. All rights reserved."
-      End
-      Begin VB.Menu MenuAboutTrademark 
-         Caption         =   "SAM TOKI STUDIO is a trademark of CZJ Software Technologies (CZJST) Inc. in the P.R.C and other countries."
-      End
-      Begin VB.Menu MenuAbout3_ 
-         Caption         =   "-"
-      End
-      Begin VB.Menu MenuAboutCommercial 
-         Caption         =   "Commercial use of this software is strictly prohibited."
-      End
-   End
-   Begin VB.Menu Menu2_ 
-      Caption         =   "　|　"
-      Enabled         =   0   'False
-   End
-   Begin VB.Menu MenuLanguage 
-      Caption         =   "Ａ字あ (&L)"
-      Begin VB.Menu MenuLanguageENG 
-         Caption         =   "English (United States)"
-         Checked         =   -1  'True
-         Shortcut        =   +{F1}
-      End
-      Begin VB.Menu MenuLanguageCHS 
-         Caption         =   "中文（简体）"
-         Enabled         =   0   'False
-         Shortcut        =   +{F2}
-      End
-      Begin VB.Menu MenuLanguageCHT 
-         Caption         =   "中文（繁體）"
-         Enabled         =   0   'False
-         Shortcut        =   +{F3}
-      End
-      Begin VB.Menu MenuLanguageJPN 
-         Caption         =   "日本語"
-         Enabled         =   0   'False
-         Shortcut        =   +{F4}
-      End
-   End
-   Begin VB.Menu Menu3_ 
-      Caption         =   "　|　"
-      Enabled         =   0   'False
-   End
-   Begin VB.Menu MenuEXIT 
-      Caption         =   "E&XIT"
    End
 End
 Attribute VB_Name = "FormMainWindow"
@@ -1417,15 +1289,15 @@ Attribute VB_Exposed = False
 '  Timer+Lottery
 '
 '  Powered by Sam Toki
-'  Version: v8.20 Release Version ENG
-'  Date:    09/25/2020 (Fri.)
-'  History: First version v0.10 Beta was built on 03/24/2017.
+'  Version: v8.32eng
+'  Date:    2021/08/23 (Mon)
+'  History: First version v0.10 was built on 2017/03/24.
 '
 '  WARNING: Commercial use of this computer software is strictly prohibited.
 '           Open source license:      GNU GPL v3
 '           Creative Commons license: CC BY-NC 3.0
 '
-'  Copyright: TM & (C) 2015-2020 SAM TOKI STUDIO. All rights reserved.
+'  Copyright: TM & (C) 2015-2021 SAM TOKI STUDIO. All rights reserved.
 '             SAM TOKI STUDIO is a trademark of CZJ Software Technologies (CZJST) Inc. in the P.R.C and other countries.
 '
 '  ---------------------------------------------------------------------------------------------------------------------
@@ -1439,9 +1311,6 @@ Attribute VB_Exposed = False
 '[] DECLARATIONS []
 
 Option Explicit
-
-'Declare Menu...
-Public setlanguage As String
 
 'Declare Controls...
 Public timerswitch As Boolean
@@ -1536,8 +1405,6 @@ Public answer
 
     Public Sub Form_Load()
         'FIRST GENERAL RESET
-
-        setlanguage = "ENG"
 
         timerswitch = False
         shutdownwhentimeupswitch = False
@@ -1901,27 +1768,7 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
 
 '[] COMMANDS []
 
-    'CMD Language...
-    Public Sub MenuLanguageENG_Click()
-        'Call ModuleLoadLanguage.LoadLanguageENG
-    End Sub
-    Public Sub MenuLanguageCHS_Click()
-        'Call ModuleLoadLanguage.LoadLanguageCHS
-    End Sub
-    Public Sub MenuLanguageCHT_Click()
-        'Call ModuleLoadLanguage.LoadLanguageCHT
-    End Sub
-    Public Sub MenuLanguageJPN_Click()
-        'Call ModuleLoadLanguage.LoadLanguageJPN
-    End Sub
-
     'CMD Controls...
-    Public Sub MenuEXIT_Click()
-        End
-    End Sub
-    Public Sub CmdEXIT_Click()
-        Call MenuEXIT_Click
-    End Sub
     Public Sub MenuSettings_Click()
         FormSettings.Move (Screen.Width / 2), (Screen.Height / 2), 0, 0
         FormSettings.windowanimationtargetleft = (Screen.Width / 2) - (12930 / 2)
@@ -1929,6 +1776,15 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
         FormSettings.windowanimationtargetwidth = 12930
         FormSettings.windowanimationtargetheight = 6945
         FormSettings.Show
+    End Sub
+    Public Sub CmdSettings_Click()
+        Call MenuSettings_Click
+    End Sub
+    Public Sub MenuEXIT_Click()
+        End
+    End Sub
+    Public Sub CmdEXIT_Click()
+        Call MenuEXIT_Click
     End Sub
 
     Public Sub MenuTimerStartPauseResume_Click()
@@ -1986,20 +1842,20 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
     Public Sub CmdTimerClear_Click()
         Call MenuTimerClear_Click
     End Sub
-    Public Sub MenuTimerShutdownWhenTimerEnds_Click()
+    Public Sub MenuTimerShutdownWhenTimerEndsSwitch_Click()
         Select Case shutdownwhentimeupswitch
             Case True
                 shutdownwhentimeupswitch = False
-                CheckboxShutdownWhenTimerEnds.Value = 0
-                MenuTimerShutdownWhenTimerEnds.Checked = False
+                CheckboxShutdownWhenTimerEndsSwitch.Value = 0
+                MenuTimerShutdownWhenTimerEndsSwitch.Checked = False
             Case False
                 shutdownwhentimeupswitch = True
-                CheckboxShutdownWhenTimerEnds.Value = 1
-                MenuTimerShutdownWhenTimerEnds.Checked = True
+                CheckboxShutdownWhenTimerEndsSwitch.Value = 1
+                MenuTimerShutdownWhenTimerEndsSwitch.Checked = True
         End Select
     End Sub
-    Public Sub CheckboxShutdownWhenTimerEnds_Click()
-        Call MenuTimerShutdownWhenTimerEnds_Click
+    Public Sub CheckboxShutdownWhenTimerEndsSwitch_Click()
+        Call MenuTimerShutdownWhenTimerEndsSwitch_Click
     End Sub
     Public Sub MenuLotteryStartLottery_Click()
         lotteryhinttext = "Now Loading..."
@@ -2020,7 +1876,7 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
         If soundswitch = False Then Exit Sub
         Select Case lotterytoneswitch
             Case True
-                WindowsMediaPlayer1.URL = App.Path & "\CZJST_appdata\CZJST_audio\CZJSTaudio_DiceRoll[Long].wav"
+                WindowsMediaPlayer1.URL = App.Path & "\CZJSTappdata\CZJSTaudio\CZJSTaudio_DiceRoll[Long].wav"
             Case False
                 WindowsMediaPlayer1.URL = ""
         End Select
@@ -2105,7 +1961,7 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
         FormMiniMode.TimerMiniModeAutoHide.Enabled = True
         minimodeautohidetimeout = 10
 
-        If bigfloatingclockswitch = True Then Call MenuExtrasBigFloatingClock_Click
+        If bigfloatingclockswitch = True Then Call MenuExtrasBigFloatingClockSwitch_Click
 
         FormMainWindow.WindowState = 1
     End Sub
@@ -2131,14 +1987,14 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
     Public Sub CmdSoundSwitch_Click()
         Call MenuExtrasSoundSwitch_Click
     End Sub
-    Public Sub MenuExtrasBigFloatingClock_Click()
+    Public Sub MenuExtrasBigFloatingClockSwitch_Click()
         Select Case bigfloatingclockswitch
             Case True
                 bigfloatingclockswitch = False
                 FormBigFloatingClock.windowanimationtargetwidth = 0
                 FormBigFloatingClock.windowanimationtargetheight = 0
                 FormBigFloatingClock.bigfloatingclockautohidetimeout = -1
-                MenuExtrasBigFloatingClock.Checked = False
+                MenuExtrasBigFloatingClockSwitch.Checked = False
                 ShapeLightBigFloatingClockSwitch.BorderStyle = 0
                 ShapeLightBigFloatingClockSwitch.FillStyle = 1
                 CmdBigFloatingClockSwitch.Caption = "Big Clock: OFF"
@@ -2149,14 +2005,14 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
                 FormBigFloatingClock.windowanimationtargetheight = 1485
                 FormBigFloatingClock.Show
                 FormBigFloatingClock.bigfloatingclockautohidetimeout = -1
-                MenuExtrasBigFloatingClock.Checked = True
+                MenuExtrasBigFloatingClockSwitch.Checked = True
                 ShapeLightBigFloatingClockSwitch.BorderStyle = 1
                 ShapeLightBigFloatingClockSwitch.FillStyle = 0
                 CmdBigFloatingClockSwitch.Caption = "Big Clock: ON"
         End Select
     End Sub
     Public Sub CmdBigFloatingClockSwitch_Click()
-        Call MenuExtrasBigFloatingClock_Click
+        Call MenuExtrasBigFloatingClockSwitch_Click
     End Sub
     Public Sub MenuExtrasRunWindowsCalculator_Click()
         Shell "cmd.exe /c calc", vbHide

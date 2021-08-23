@@ -30,6 +30,26 @@ Begin VB.Form FormInputNumber
    ScaleHeight     =   5895
    ScaleWidth      =   6210
    ShowInTaskbar   =   0   'False
+   Begin VB.CommandButton CmdCancel 
+      Cancel          =   -1  'True
+      Caption         =   "X"
+      BeginProperty Font 
+         Name            =   "Avenir Next LT Pro"
+         Size            =   15.75
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   645
+      Left            =   5250
+      MouseIcon       =   "FormInputNumber.frx":0E04
+      MousePointer    =   99  'Custom
+      TabIndex        =   16
+      Top             =   4935
+      Width           =   645
+   End
    Begin VB.Timer TimerWindowAnimation 
       Interval        =   1
       Left            =   5880
@@ -51,33 +71,13 @@ Begin VB.Form FormInputNumber
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      Height          =   600
+      Height          =   645
       Left            =   3990
-      MouseIcon       =   "FormInputNumber.frx":0E04
-      MousePointer    =   99  'Custom
-      TabIndex        =   16
-      Top             =   4935
-      Width           =   1905
-   End
-   Begin VB.CommandButton CmdCancel 
-      Cancel          =   -1  'True
-      Caption         =   "&Cancel"
-      BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
-         Size            =   15.75
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
-      Height          =   600
-      Left            =   315
       MouseIcon       =   "FormInputNumber.frx":0F56
       MousePointer    =   99  'Custom
       TabIndex        =   15
       Top             =   4935
-      Width           =   1905
+      Width           =   1170
    End
    Begin VB.CommandButton CmdNumber0 
       Caption         =   "&0"
@@ -343,7 +343,7 @@ Begin VB.Form FormInputNumber
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False

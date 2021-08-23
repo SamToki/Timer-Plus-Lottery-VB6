@@ -178,12 +178,12 @@ Begin VB.Form FormMiniMode
       Width           =   435
    End
    Begin VB.CommandButton CmdEXIT 
-      Caption         =   "X"
+      Caption         =   "E"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -199,12 +199,12 @@ Begin VB.Form FormMiniMode
    End
    Begin VB.CommandButton CmdClose 
       Cancel          =   -1  'True
-      Caption         =   "C"
+      Caption         =   "X"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   9.75
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -236,10 +236,10 @@ Begin VB.Form FormMiniMode
       BackStyle       =   0  'Transparent
       Caption         =   "0"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   9.75
+         Name            =   "MS Serif"
+         Size            =   12
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -248,7 +248,7 @@ Begin VB.Form FormMiniMode
       Height          =   270
       Left            =   1155
       TabIndex        =   13
-      Top             =   975
+      Top             =   950
       Width           =   842
    End
    Begin VB.Shape ShapeLightLottery 
@@ -291,10 +291,10 @@ Begin VB.Form FormMiniMode
       BackStyle       =   0  'Transparent
       Caption         =   "0:00"
       BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   9.75
+         Name            =   "MS Serif"
+         Size            =   12
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -303,7 +303,7 @@ Begin VB.Form FormMiniMode
       Height          =   270
       Left            =   1155
       TabIndex        =   9
-      Top             =   551
+      Top             =   530
       Width           =   840
    End
    Begin VB.Shape ShapeLightTimer 
@@ -652,7 +652,7 @@ Public windowanimationtargetheight As Integer
             FormMiniMode.windowanimationtargetheight = 1830
             FormMainWindow.minimodeautohidetimeout = 10
     
-            If FormMainWindow.bigfloatingclockswitch = True Then Call FormMainWindow.MenuExtrasBigFloatingClock_Click
+            If FormMainWindow.bigfloatingclockswitch = True Then Call FormMainWindow.MenuExtrasBigFloatingClockSwitch_Click
 
             'Call FormMainWindow...
             FormMainWindow.Show

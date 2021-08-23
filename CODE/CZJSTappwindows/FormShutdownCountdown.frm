@@ -1,6 +1,6 @@
 VERSION 5.00
 Object = "{6BF52A50-394A-11D3-B153-00C04F79FAA6}#1.0#0"; "wmp.dll"
-Begin VB.Form FormTimeUp 
+Begin VB.Form FormShutdownCountdown 
    Appearance      =   0  'Flat
    AutoRedraw      =   -1  'True
    BackColor       =   &H00D0D0D0&
@@ -21,11 +21,11 @@ Begin VB.Form FormTimeUp
       Strikethrough   =   0   'False
    EndProperty
    ForeColor       =   &H000000FF&
-   Icon            =   "FormTimeUp.frx":0000
-   LinkTopic       =   "FormTimeUp"
+   Icon            =   "FormShutdownCountdown.frx":0000
+   LinkTopic       =   "FormShutdownCountdown"
    MaxButton       =   0   'False
    MinButton       =   0   'False
-   MouseIcon       =   "FormTimeUp.frx":0CB2
+   MouseIcon       =   "FormShutdownCountdown.frx":0CB2
    MousePointer    =   99  'Custom
    Moveable        =   0   'False
    ScaleHeight     =   2745
@@ -36,15 +36,9 @@ Begin VB.Form FormTimeUp
       Left            =   12180
       Top             =   2415
    End
-   Begin VB.Timer TimerTimeUpTextBlink 
-      Enabled         =   0   'False
-      Interval        =   250
-      Left            =   420
-      Top             =   1155
-   End
-   Begin VB.CommandButton CmdOK 
+   Begin VB.CommandButton CmdCancel 
       Cancel          =   -1  'True
-      Caption         =   "Dismiss"
+      Caption         =   "X"
       Default         =   -1  'True
       BeginProperty Font 
          Name            =   "Avenir Next LT Pro"
@@ -56,24 +50,43 @@ Begin VB.Form FormTimeUp
          Strikethrough   =   0   'False
       EndProperty
       Height          =   645
-      Left            =   7245
-      MouseIcon       =   "FormTimeUp.frx":0E04
+      Left            =   11655
+      MouseIcon       =   "FormShutdownCountdown.frx":0E04
       MousePointer    =   99  'Custom
       TabIndex        =   3
       Top             =   1890
+      Width           =   645
+   End
+   Begin VB.CommandButton CmdOK 
+      Caption         =   "Shut Down Now (30)"
+      BeginProperty Font 
+         Name            =   "Avenir Next LT Pro"
+         Size            =   18
+         Charset         =   0
+         Weight          =   400
+         Underline       =   0   'False
+         Italic          =   0   'False
+         Strikethrough   =   0   'False
+      EndProperty
+      Height          =   645
+      Left            =   6405
+      MouseIcon       =   "FormShutdownCountdown.frx":0F56
+      MousePointer    =   99  'Custom
+      TabIndex        =   4
+      Top             =   1890
       Width           =   5055
    End
-   Begin VB.Timer TimerExpiredTimeCount 
+   Begin VB.Timer TimerShutdownCountdown 
       Enabled         =   0   'False
       Interval        =   1000
-      Left            =   420
+      Left            =   7350
       Top             =   2415
    End
    Begin WMPLibCtl.WindowsMediaPlayer WindowsMediaPlayer1 
       Height          =   420
-      Left            =   945
-      TabIndex        =   4
-      Top             =   1155
+      Left            =   7875
+      TabIndex        =   5
+      Top             =   2415
       Visible         =   0   'False
       Width           =   450
       URL             =   ""
@@ -102,26 +115,26 @@ Begin VB.Form FormTimeUp
       _cx             =   794
       _cy             =   741
    End
-   Begin VB.Label LabelExpiredTime 
+   Begin VB.Label LabelHinttextB 
       Appearance      =   0  'Flat
       BackColor       =   &H000000FF&
       BackStyle       =   0  'Transparent
-      Caption         =   "Expired 0 sec."
+      Caption         =   "HintTextB Abg"
       BeginProperty Font 
          Name            =   "Avenir Next LT Pro"
-         Size            =   18
+         Size            =   21.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H00000000&
+      ForeColor       =   &H000000D0&
       Height          =   540
-      Left            =   330
+      Left            =   315
       TabIndex        =   2
-      Top             =   2060
-      Width           =   6525
+      Top             =   1100
+      Width           =   11880
    End
    Begin VB.Label LabelAppTitle 
       Appearance      =   0  'Flat
@@ -135,26 +148,25 @@ Begin VB.Form FormTimeUp
       Top             =   105
       Width           =   10005
    End
-   Begin VB.Label LabelHinttextTimeUp 
-      Alignment       =   2  'Center
+   Begin VB.Label LabelHinttextA 
       Appearance      =   0  'Flat
       BackColor       =   &H000000FF&
       BackStyle       =   0  'Transparent
-      Caption         =   "TIME UP"
+      Caption         =   "HintTextA Abg"
       BeginProperty Font 
          Name            =   "Avenir Next LT Pro"
-         Size            =   48
+         Size            =   21.75
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H00FF6600&
-      Height          =   1170
+      ForeColor       =   &H000000D0&
+      Height          =   540
       Left            =   315
       TabIndex        =   1
-      Top             =   525
+      Top             =   500
       Width           =   11880
    End
    Begin VB.Shape ShapeEdge 
@@ -168,7 +180,7 @@ Begin VB.Form FormTimeUp
       Width           =   12510
    End
 End
-Attribute VB_Name = "FormTimeUp"
+Attribute VB_Name = "FormShutdownCountdown"
 Attribute VB_GlobalNameSpace = False
 Attribute VB_Creatable = False
 Attribute VB_PredeclaredId = True
@@ -207,44 +219,50 @@ Public windowanimationtargetheight As Integer
 
 '[] TIMERS []
 
-    Public Sub TimerExpiredTimeCount_Timer()
-        If FormMainWindow.timerexpiredsec <= 99999 Then FormMainWindow.timerexpiredsec = FormMainWindow.timerexpiredsec + 1
-        If FormMainWindow.timerexpiredsec Mod 10 = 1 Then Call TimerRingtonePlayer  'repeat playing timer tone
-        LabelExpiredTime.Caption = "Expired " & FormMainWindow.timerexpiredsec & " sec."
-    End Sub
-    
-    Public Sub TimerTimeUpTextBlink_Timer()
-        If LabelHinttextTimeUp.ForeColor = &HFF6600 Then LabelHinttextTimeUp.ForeColor = &HFF& Else LabelHinttextTimeUp.ForeColor = &HFF6600
+    Public Sub TimerShutdownCountdown_Timer()
+        FormMainWindow.shutdowncountdowntimeout = FormMainWindow.shutdowncountdowntimeout - 1
+        Select Case FormMainWindow.shutdowncountdowntype
+            Case "Shutdown"
+                CmdOK.Caption = "Shut Down Now (" & FormMainWindow.shutdowncountdowntimeout & ")"
+            Case "Restart"
+                CmdOK.Caption = "Restart Now (" & FormMainWindow.shutdowncountdowntimeout & ")"
+        End Select
+        If FormMainWindow.shutdowncountdowntimeout <= 0 Then Call CmdOK_Click
     End Sub
 
 '[] COMMANDS []
 
-    Public Sub CmdOK_Click()
-        WindowsMediaPlayer1.URL = ""
-        TimerExpiredTimeCount.Enabled = False
-        TimerTimeUpTextBlink.Enabled = False
-        FormMainWindow.timerexpiredsec = 0
-        Call FormMainWindow.MenuTimerReset_Click
+    Public Sub CmdCancel_Click()
+        TimerShutdownCountdown.Enabled = False
         FormMainWindow.Enabled = True: FormMiniMode.Enabled = True
 
         windowanimationtargetleft = (Screen.Width / 2) - (12510 / 2)
-        windowanimationtargettop = (Screen.Height / 2)
+        windowanimationtargettop = 0
         windowanimationtargetwidth = 12510
         windowanimationtargetheight = 0
     End Sub
+    Public Sub CmdOK_Click()
+        'Interface sound...
+        If FormMainWindow.soundswitch = True Then
+            Select Case FormMainWindow.interfacesoundswitch
+                Case True
+                    WindowsMediaPlayer1.URL = "C:\Windows\Media\Windows Shutdown.wav"
+                Case False
+                    WindowsMediaPlayer1.URL = ""
+            End Select
+        End If
 
-'  ---------------------------------------------------------------------------------------------------------------------
-
-'[] SPECIAL []
-
-    Public Sub TimerRingtonePlayer()
-        If FormMainWindow.soundswitch = False Then Exit Sub
-        Select Case FormMainWindow.timertoneswitch
-            Case True
-                WindowsMediaPlayer1.URL = App.Path & "\CZJST_appdata\CZJST_audio\CZJSTaudio_TimerTimeUp[Long].wav"
-            Case False
-                WindowsMediaPlayer1.URL = ""
+        Select Case FormMainWindow.shutdowncountdowntype
+            Case "Shutdown"
+                LabelHinttextA.Caption = "Shutting down..."
+                Shell "cmd.exe /c shutdown -s -t 0", vbHide
+            Case "Restart"
+                LabelHinttextA.Caption = "Restarting computer..."
+                Shell "cmd.exe /c shutdown -r -t 0", vbHide
         End Select
+
+        CmdCancel.Visible = False
+        CmdOK.Visible = False
     End Sub
 
 '  ---------------------------------------------------------------------------------------------------------------------
