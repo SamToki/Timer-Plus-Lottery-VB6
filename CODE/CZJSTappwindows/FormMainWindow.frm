@@ -375,7 +375,7 @@ Begin VB.Form FormMainWindow
          Caption         =   "Enter..."
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   12
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
@@ -394,7 +394,7 @@ Begin VB.Form FormMainWindow
          Caption         =   "Enter..."
          BeginProperty Font 
             Name            =   "MS Sans Serif"
-            Size            =   12
+            Size            =   9.75
             Charset         =   0
             Weight          =   400
             Underline       =   0   'False
