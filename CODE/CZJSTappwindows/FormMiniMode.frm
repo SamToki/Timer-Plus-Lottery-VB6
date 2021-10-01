@@ -179,15 +179,6 @@ Begin VB.Form FormMiniMode
    End
    Begin VB.CommandButton CmdEXIT 
       Caption         =   "E"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   330
       Left            =   3885
       MouseIcon       =   "FormMiniMode.frx":1894
@@ -200,15 +191,6 @@ Begin VB.Form FormMiniMode
    Begin VB.CommandButton CmdClose 
       Cancel          =   -1  'True
       Caption         =   "X"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       Height          =   330
       Left            =   3255
       MaskColor       =   &H000000FF&
@@ -519,7 +501,7 @@ Public windowanimationtargetheight As Integer
             End If
         End Function
  
-        Public Function MakeTransparent(ByVal hWnd As Long, ByVal Perc As Integer) As Long
+        Public Function MakeTransparent(ByVal hWnd As Long, ByVal Perc As Long) As Long
             Dim Msg As Long
             On Error Resume Next
             If Perc < 0 Or Perc > 255 Then

@@ -192,7 +192,7 @@ Attribute VB_Exposed = False
             End If
         End Function
  
-        Public Function MakeTransparent(ByVal hWnd As Long, ByVal Perc As Integer) As Long
+        Public Function MakeTransparent(ByVal hWnd As Long, ByVal Perc As Long) As Long
             Dim Msg As Long
             On Error Resume Next
             If Perc < 0 Or Perc > 255 Then

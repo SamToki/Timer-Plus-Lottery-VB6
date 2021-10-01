@@ -209,7 +209,6 @@ Public windowanimationtargetheight As Integer
 
     'ALWAYS FRONT (CODES FROM INTERNET)
         Dim retValue As Long
-
         Private Declare Function SetWindowPos Lib "user32" ( _
             ByVal hWnd As Long, _
             ByVal hWndInsertAfter As Long, _
