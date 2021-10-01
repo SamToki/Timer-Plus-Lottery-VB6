@@ -373,15 +373,6 @@ Begin VB.Form FormMainWindow
       End
       Begin VB.CommandButton CmdTimerSecInput 
          Caption         =   "Enter..."
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
          Height          =   435
          Left            =   3675
          MouseIcon       =   "FormMainWindow.frx":29BE
@@ -392,15 +383,6 @@ Begin VB.Form FormMainWindow
       End
       Begin VB.CommandButton CmdTimerMinInput 
          Caption         =   "Enter..."
-         BeginProperty Font 
-            Name            =   "MS Sans Serif"
-            Size            =   9.75
-            Charset         =   0
-            Weight          =   400
-            Underline       =   0   'False
-            Italic          =   0   'False
-            Strikethrough   =   0   'False
-         EndProperty
          Height          =   435
          Left            =   1050
          MouseIcon       =   "FormMainWindow.frx":2B10
@@ -1390,8 +1372,8 @@ Public lotterylooper As Integer
 Public clockhour As Long
 Public clockmin As Long
 Public clocksec As Long
-Public clockmonth As Integer
-Public clockday As Integer
+'DISABLED LINE: Public clockmonth As Integer
+'DISABLED LINE: Public clockday As Integer
 Public clockweekday As String
 
 'Declare Dialog...
@@ -1477,8 +1459,8 @@ Public answer
         clockhour = 0
         clockmin = 0
         clocksec = 0
-        clockmonth = 0
-        clockday = 0
+        'DISABLED LINE: clockmonth = 0
+        'DISABLED LINE: clockday = 0
         clockweekday = "??"
     End Sub
 
@@ -1490,8 +1472,8 @@ Public answer
         clockhour = Hour(Time)
         clockmin = Minute(Time)
         clocksec = Second(Time)
-        clockmonth = Month(Date)
-        clockday = Day(Date)
+        'DISABLED LINE: clockmonth = Month(Date)
+        'DISABLED LINE: clockday = Day(Date)
         Select Case Weekday(Date)
             Case 1
                 clockweekday = "Sun"
@@ -1525,7 +1507,7 @@ Public answer
         If (minimodetimeroverwritedateswitch = True And timerswitch = True) Then
             FormMiniMode.LabelClockDate.Caption = LabelTimerMin.Caption & " : " & LabelTimerSec.Caption
         Else
-            FormMiniMode.LabelClockDate.Caption = clockmonth & "/" & clockday & " (" & clockweekday & ")"
+            FormMiniMode.LabelClockDate.Caption = Format(Month(Date), "00") & "/" & Format(Day(Date), "00") & " (" & clockweekday & ")"
         End If
 
         If minimodeclockoclockblinkswitch = True And Minute(Time) = 0 And Second(Time) = 0 And FormMiniMode.minimodeclockoclockblinkrepeatedtimes = -1 Then
