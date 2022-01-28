@@ -5,7 +5,7 @@ Begin VB.Form FormMainWindow
    AutoRedraw      =   -1  'True
    BackColor       =   &H00D0D0D0&
    BorderStyle     =   1  'Fixed Single
-   Caption         =   "Timer+Lottery v8.32eng"
+   Caption         =   "Timer+Lottery v8.33eng"
    ClientHeight    =   7890
    ClientLeft      =   45
    ClientTop       =   750
@@ -1244,11 +1244,14 @@ Begin VB.Form FormMainWindow
       End
       Begin VB.Menu MenuAbout 
          Caption         =   "&About"
+         Begin VB.Menu MenuAboutDownload 
+            Caption         =   "&Download latest version..."
+         End
          Begin VB.Menu MenuAboutUpdate 
             Caption         =   "Check for &update manually..."
          End
          Begin VB.Menu MenuAboutGitHub 
-            Caption         =   "GitHub @&SamToki user page..."
+            Caption         =   "&GitHub @SamToki user page..."
          End
          Begin VB.Menu MenuAboutLicense 
             Caption         =   "Released under &license GNU GPL v3..."
@@ -1257,7 +1260,7 @@ Begin VB.Form FormMainWindow
             Caption         =   "TM && (C) 2015-2022 SAM TOKI STUDIO"
             Enabled         =   0   'False
          End
-         Begin VB.Menu MenuDate 
+         Begin VB.Menu MenuAboutDate 
             Caption         =   "2022/01/28"
             Enabled         =   0   'False
          End
@@ -2071,6 +2074,9 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
     End Sub
     Public Sub MenuExtrasHideMainWindow_Click()
         FormMainWindow.Hide
+    End Sub
+    Public Sub MenuAboutDownload_Click()
+        Call ShellExecute(Me.hWnd, "open", "https://github.com/SamToki/VB6---Timer-Plus-Lottery/raw/main/RELEASE/Timer+Lottery.zip", "", "", SW_SHOW)
     End Sub
     Public Sub MenuAboutUpdate_Click()
         Call ShellExecute(Me.hWnd, "open", "https://github.com/SamToki/VB6---Timer-Plus-Lottery", "", "", SW_SHOW)
