@@ -58,7 +58,7 @@ Begin VB.Form FormShutdownCountdown
       Width           =   645
    End
    Begin VB.CommandButton CmdOK 
-      Caption         =   "Shut Down Now (30)"
+      Caption         =   "Shut Down &Now (30)"
       BeginProperty Font 
          Name            =   "Avenir Next LT Pro"
          Size            =   18
@@ -223,9 +223,9 @@ Public windowanimationtargetheight As Integer
         FormMainWindow.shutdowncountdowntimeout = FormMainWindow.shutdowncountdowntimeout - 1
         Select Case FormMainWindow.shutdowncountdowntype
             Case "Shutdown"
-                CmdOK.Caption = "Shut Down Now (" & FormMainWindow.shutdowncountdowntimeout & ")"
+                CmdOK.Caption = "Shut Down &Now (" & FormMainWindow.shutdowncountdowntimeout & ")"
             Case "Restart"
-                CmdOK.Caption = "Restart Now (" & FormMainWindow.shutdowncountdowntimeout & ")"
+                CmdOK.Caption = "Restart &Now (" & FormMainWindow.shutdowncountdowntimeout & ")"
         End Select
         If FormMainWindow.shutdowncountdowntimeout <= 0 Then Call CmdOK_Click
     End Sub

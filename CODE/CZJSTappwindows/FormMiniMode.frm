@@ -47,7 +47,7 @@ Begin VB.Form FormMiniMode
       Top             =   315
    End
    Begin VB.CommandButton CmdRestartComputer 
-      Caption         =   "Restart"
+      Caption         =   "&Restart"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -67,7 +67,7 @@ Begin VB.Form FormMiniMode
       Width           =   1065
    End
    Begin VB.CommandButton CmdShutDownComputer 
-      Caption         =   "Shut Down"
+      Caption         =   "&Shut Down"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -87,7 +87,7 @@ Begin VB.Form FormMiniMode
       Width           =   1065
    End
    Begin VB.CommandButton CmdLockCurrentUser 
-      Caption         =   "Lock"
+      Caption         =   "&Lock"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -107,7 +107,7 @@ Begin VB.Form FormMiniMode
       Width           =   1065
    End
    Begin VB.CommandButton CmdRunWindowsCalculator 
-      Caption         =   "Calculator"
+      Caption         =   "&Calculator"
       BeginProperty Font 
          Name            =   "MS Sans Serif"
          Size            =   8.25
@@ -127,7 +127,7 @@ Begin VB.Form FormMiniMode
       Width           =   1065
    End
    Begin VB.CommandButton CmdLotteryStartLottery 
-      Caption         =   "START LOTTERY"
+      Caption         =   "START L&OTTERY"
       Height          =   330
       Left            =   2205
       MouseIcon       =   "FormMiniMode.frx":134C
@@ -137,7 +137,7 @@ Begin VB.Form FormMiniMode
       Width           =   2115
    End
    Begin VB.CommandButton CmdTimerReset 
-      Caption         =   "RESET"
+      Caption         =   "R&ESET"
       Height          =   330
       Left            =   3255
       MouseIcon       =   "FormMiniMode.frx":149E
@@ -147,7 +147,7 @@ Begin VB.Form FormMiniMode
       Width           =   1065
    End
    Begin VB.CommandButton CmdTimerStartPauseResume 
-      Caption         =   "START"
+      Caption         =   "&START"
       Height          =   330
       Left            =   2205
       MouseIcon       =   "FormMiniMode.frx":15F0

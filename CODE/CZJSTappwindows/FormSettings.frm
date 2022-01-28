@@ -56,7 +56,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxSoundsInterfaceSounds 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Interface Sounds"
+         Caption         =   "Inter&face Sounds"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -70,7 +70,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxSoundsLotteryTone 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Lottery tone"
+         Caption         =   "Lottery tone (&8)"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   3150
@@ -84,7 +84,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxSoundsTimerTone 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Timer tone"
+         Caption         =   "Timer tone (&7)"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -118,7 +118,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxDisplayUseOldScrollAnimationInLotteryWindow 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Use old scroll animation in Lottery Window"
+         Caption         =   "Use old scroll a&nimation in Lottery Window"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -131,7 +131,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxDisplayWindowAnimations 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Window animations"
+         Caption         =   "Window &animations"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -145,7 +145,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxDisplayLightBulbIndicators 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Show light bulb indicators"
+         Caption         =   "Show &light bulb indicators"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   3150
@@ -179,7 +179,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxMiniModeAlwaysShowDate 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Always show date"
+         Caption         =   "Alwa&ys show date"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -193,7 +193,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxMiniMode24HrFormat 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "24-Hour Format"
+         Caption         =   "2&4-Hour Format"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -207,7 +207,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxMiniModeShowSeconds 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Show seconds"
+         Caption         =   "Show &seconds"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   3150
@@ -221,7 +221,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxMiniModeBlinkDots 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Blink dots on the clock"
+         Caption         =   "Blink &dots on the clock"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -234,7 +234,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxMiniModeBlinkWhenMinuteHitsZero 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Blink the window when minute hits zero"
+         Caption         =   "Blin&k the window when minute hits zero"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -248,7 +248,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxMiniModeTimerOverwriteDate 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Display the timer instead of the date when it is running"
+         Caption         =   "Display the timer instead of the date when it is &running"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -275,7 +275,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxMiniModeDarkTheme 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Dark Theme in Mini Mode Window"
+         Caption         =   "Dark Theme in M&ini Mode Window"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -289,7 +289,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxMiniModeAutoExpand 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Automatically expand when mouse moves over"
+         Caption         =   "Automatically e&xpand when mouse moves over"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -326,7 +326,7 @@ Begin VB.Form FormSettings
          Appearance      =   0  'Flat
          BackColor       =   &H000000FF&
          BackStyle       =   0  'Transparent
-         Caption         =   "Opacity:"
+         Caption         =   "&Opacity:"
          ForeColor       =   &H00000000&
          Height          =   375
          Left            =   210
@@ -455,7 +455,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxBigFloatingClock24HrFormat 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "24-Hour Format"
+         Caption         =   "&24-Hour Format"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -469,7 +469,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxBigFloatingClockBlinkWhenMinuteHitsZero 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Blink the clock when minute hits zero"
+         Caption         =   "&Blink the clock when minute hits zero"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -483,7 +483,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxBigFloatingClockShadow 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Shadow (recommended)"
+         Caption         =   "Shado&w (recommended)"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -497,7 +497,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxBigFloatingClockAutoHide 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Automatically hide when mouse moves over"
+         Caption         =   "Automatically &hide when mouse moves over"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -552,7 +552,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxLotteryDarkTheme 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Dark Theme in Lottery Window"
+         Caption         =   "Dark Theme in &Lottery Window"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210
@@ -565,7 +565,7 @@ Begin VB.Form FormSettings
       Begin VB.CheckBox CheckboxLotteryPreventSameNumbersInHistory 
          Appearance      =   0  'Flat
          BackColor       =   &H00D0D0D0&
-         Caption         =   "Prevent same numbers in history (recommended)"
+         Caption         =   "&Prevent same numbers in history (recommended)"
          ForeColor       =   &H00000000&
          Height          =   435
          Left            =   210

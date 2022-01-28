@@ -31,7 +31,7 @@ Begin VB.Form FormMainWindow
    StartUpPosition =   2  'ÆÁÄ»ÖÐÐÄ
    Begin VB.CommandButton CmdEXIT 
       Cancel          =   -1  'True
-      Caption         =   "EXIT"
+      Caption         =   "E&XIT"
       Height          =   435
       Left            =   13650
       MouseIcon       =   "FormMainWindow.frx":0E04
@@ -41,7 +41,7 @@ Begin VB.Form FormMainWindow
       Width           =   1380
    End
    Begin VB.CommandButton CmdSettings 
-      Caption         =   "Settings..."
+      Caption         =   "S&ettings..."
       Height          =   435
       Left            =   12285
       MouseIcon       =   "FormMainWindow.frx":0F56
@@ -51,7 +51,7 @@ Begin VB.Form FormMainWindow
       Width           =   1380
    End
    Begin VB.CommandButton CmdRestartComputer 
-      Caption         =   "Restart"
+      Caption         =   "&Restart..."
       Height          =   435
       Left            =   10815
       MouseIcon       =   "FormMainWindow.frx":10A8
@@ -62,7 +62,7 @@ Begin VB.Form FormMainWindow
       Width           =   1275
    End
    Begin VB.CommandButton CmdShutDownComputer 
-      Caption         =   "Shut Down"
+      Caption         =   "&Shut Down..."
       Height          =   435
       Left            =   9555
       MouseIcon       =   "FormMainWindow.frx":11FA
@@ -73,7 +73,7 @@ Begin VB.Form FormMainWindow
       Width           =   1275
    End
    Begin VB.CommandButton CmdLockCurrentUser 
-      Caption         =   "Lock"
+      Caption         =   "&Lock"
       Height          =   435
       Left            =   8295
       MouseIcon       =   "FormMainWindow.frx":134C
@@ -84,7 +84,7 @@ Begin VB.Form FormMainWindow
       Width           =   1275
    End
    Begin VB.CommandButton CmdRunWindowsCalculator 
-      Caption         =   "Calculator"
+      Caption         =   "&Calculator"
       Height          =   435
       Left            =   7035
       MouseIcon       =   "FormMainWindow.frx":149E
@@ -95,7 +95,7 @@ Begin VB.Form FormMainWindow
       Width           =   1275
    End
    Begin VB.CommandButton CmdBigFloatingClockSwitch 
-      Caption         =   "Big Clock: OFF"
+      Caption         =   "&Big Clock: OFF"
       Height          =   435
       Left            =   4620
       MouseIcon       =   "FormMainWindow.frx":15F0
@@ -105,7 +105,7 @@ Begin VB.Form FormMainWindow
       Width           =   2220
    End
    Begin VB.CommandButton CmdSoundSwitch 
-      Caption         =   "Sound: ON"
+      Caption         =   "S&ound: ON"
       Height          =   435
       Left            =   2415
       MouseIcon       =   "FormMainWindow.frx":1742
@@ -115,7 +115,7 @@ Begin VB.Form FormMainWindow
       Width           =   2010
    End
    Begin VB.CommandButton CmdMiniMode 
-      Caption         =   "Mini Mode"
+      Caption         =   "M&ini Mode"
       Height          =   435
       Left            =   210
       MouseIcon       =   "FormMainWindow.frx":1894
@@ -146,7 +146,7 @@ Begin VB.Form FormMainWindow
       Begin VB.CheckBox CheckboxShutdownWhenTimerEndsSwitch 
          Appearance      =   0  'Flat
          BackColor       =   &H00E0E0E0&
-         Caption         =   "Shut down computer when time is up"
+         Caption         =   "Shut &down computer when time is up"
          ForeColor       =   &H00000000&
          Height          =   330
          Left            =   1050
@@ -219,8 +219,8 @@ Begin VB.Form FormMainWindow
          Top             =   5040
          Width           =   2010
       End
-      Begin VB.CommandButton CmdTimerSecMinus10 
-         Caption         =   "-10"
+      Begin VB.CommandButton CmdTimerSecMinus15 
+         Caption         =   "-15"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   12
@@ -257,8 +257,8 @@ Begin VB.Form FormMainWindow
          Top             =   3885
          Width           =   855
       End
-      Begin VB.CommandButton CmdTimerMinMinus10 
-         Caption         =   "-10"
+      Begin VB.CommandButton CmdTimerMinMinus15 
+         Caption         =   "-15"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   12
@@ -333,8 +333,8 @@ Begin VB.Form FormMainWindow
          Top             =   3885
          Width           =   855
       End
-      Begin VB.CommandButton CmdTimerSecPlus10 
-         Caption         =   "+10"
+      Begin VB.CommandButton CmdTimerSecPlus15 
+         Caption         =   "+15"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   12
@@ -352,8 +352,8 @@ Begin VB.Form FormMainWindow
          Top             =   3465
          Width           =   1695
       End
-      Begin VB.CommandButton CmdTimerMinPlus10 
-         Caption         =   "+10"
+      Begin VB.CommandButton CmdTimerMinPlus15 
+         Caption         =   "+15"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   12
@@ -372,7 +372,7 @@ Begin VB.Form FormMainWindow
          Width           =   1695
       End
       Begin VB.CommandButton CmdTimerSecInput 
-         Caption         =   "Enter..."
+         Caption         =   "Enter(&2)..."
          Height          =   435
          Left            =   3675
          MouseIcon       =   "FormMainWindow.frx":29BE
@@ -382,7 +382,7 @@ Begin VB.Form FormMainWindow
          Width           =   1695
       End
       Begin VB.CommandButton CmdTimerMinInput 
-         Caption         =   "Enter..."
+         Caption         =   "Enter(&1)..."
          Height          =   435
          Left            =   1050
          MouseIcon       =   "FormMainWindow.frx":2B10
@@ -529,7 +529,7 @@ Begin VB.Form FormMainWindow
          Width           =   7365
       End
       Begin VB.CommandButton CmdLotteryStartLottery 
-         Caption         =   "START LOTTERY"
+         Caption         =   "START LOTTERY..."
          Default         =   -1  'True
          BeginProperty Font 
             Name            =   "Avenir Next LT Pro"
@@ -559,14 +559,14 @@ Begin VB.Form FormMainWindow
          Width           =   1275
       End
       Begin VB.CommandButton CmdLotteryGroupInput 
-         Caption         =   "Enter..."
+         Caption         =   "Enter(&4)..."
          Height          =   435
          Left            =   5880
          MouseIcon       =   "FormMainWindow.frx":3058
          MousePointer    =   99  'Custom
          TabIndex        =   54
          Top             =   3570
-         Width           =   960
+         Width           =   1170
       End
       Begin VB.CommandButton CmdLotteryGroupPlus10 
          Caption         =   "+10"
@@ -665,17 +665,17 @@ Begin VB.Form FormMainWindow
          TabIndex        =   49
          Text            =   "4"
          Top             =   2940
-         Width           =   1800
+         Width           =   2010
       End
       Begin VB.CommandButton CmdLotteryTotalInput 
-         Caption         =   "Enter..."
+         Caption         =   "Enter(&3)..."
          Height          =   435
          Left            =   5880
          MouseIcon       =   "FormMainWindow.frx":36F2
          MousePointer    =   99  'Custom
          TabIndex        =   46
          Top             =   1575
-         Width           =   960
+         Width           =   1170
       End
       Begin VB.CommandButton CmdLotteryTotalPlus10 
          Caption         =   "+10"
@@ -774,7 +774,7 @@ Begin VB.Form FormMainWindow
          TabIndex        =   41
          Text            =   "50"
          Top             =   1000
-         Width           =   1800
+         Width           =   2010
       End
       Begin VB.Timer TimerLotteryContinuous 
          Enabled         =   0   'False
@@ -1029,7 +1029,7 @@ Begin VB.Form FormMainWindow
          Appearance      =   0  'Flat
          BackColor       =   &H000000FF&
          BackStyle       =   0  'Transparent
-         Caption         =   "Group Division:"
+         Caption         =   "&Group Division:"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   12
@@ -1062,7 +1062,7 @@ Begin VB.Form FormMainWindow
          Appearance      =   0  'Flat
          BackColor       =   &H000000FF&
          BackStyle       =   0  'Transparent
-         Caption         =   "Number Range:"
+         Caption         =   "&Number Range:"
          BeginProperty Font 
             Name            =   "MS Sans Serif"
             Size            =   12
@@ -1141,117 +1141,125 @@ Begin VB.Form FormMainWindow
       _cy             =   741
    End
    Begin VB.Menu Menu 
-      Caption         =   "Menu"
+      Caption         =   "&Menu"
       Begin VB.Menu MenuSettings 
-         Caption         =   "Settings..."
+         Caption         =   "&Settings..."
          Shortcut        =   {F2}
       End
       Begin VB.Menu MenuEXIT 
-         Caption         =   "EXIT"
+         Caption         =   "E&XIT"
          Shortcut        =   {F4}
       End
       Begin VB.Menu Menu1_ 
          Caption         =   "-"
       End
       Begin VB.Menu MenuTimer 
-         Caption         =   "Timer"
+         Caption         =   "&Timer"
          Begin VB.Menu MenuTimerStartPauseResume 
-            Caption         =   "Start"
+            Caption         =   "&Start"
             Shortcut        =   {F5}
          End
          Begin VB.Menu MenuTimerReset 
-            Caption         =   "Reset"
+            Caption         =   "&Reset"
             Shortcut        =   {F6}
          End
          Begin VB.Menu MenuTimerClear 
-            Caption         =   "Clear"
+            Caption         =   "&Clear"
             Shortcut        =   {F7}
          End
          Begin VB.Menu MenuTimer1_ 
             Caption         =   "-"
          End
          Begin VB.Menu MenuTimerShutdownWhenTimerEndsSwitch 
-            Caption         =   "Shut down computer when time is up"
+            Caption         =   "Shut &down computer when time is up"
             Enabled         =   0   'False
             Shortcut        =   {F8}
          End
       End
       Begin VB.Menu MenuLottery 
-         Caption         =   "Lottery"
+         Caption         =   "&Lottery"
          Begin VB.Menu MenuLotteryStartLottery 
-            Caption         =   "Start Lottery"
+            Caption         =   "Start &Lottery..."
             Shortcut        =   +{F5}
          End
          Begin VB.Menu MenuLotteryRepeatTenTimes 
-            Caption         =   "Repeat Ten Times"
+            Caption         =   "&Repeat Ten Times"
             Shortcut        =   +{F6}
          End
          Begin VB.Menu MenuLotteryClearHistory 
-            Caption         =   "Clear History"
+            Caption         =   "&Clear History"
             Shortcut        =   +{F7}
          End
          Begin VB.Menu MenuLottery1_ 
             Caption         =   "-"
          End
          Begin VB.Menu MenuLotteryGroupSwitch 
-            Caption         =   "Group Division"
+            Caption         =   "&Group Division"
             Shortcut        =   +{F8}
          End
       End
       Begin VB.Menu MenuExtras 
-         Caption         =   "Extras"
+         Caption         =   "&Extras"
          Begin VB.Menu MenuExtrasMiniMode 
-            Caption         =   "Mini Mode"
+            Caption         =   "M&ini Mode"
             Shortcut        =   ^{F1}
          End
          Begin VB.Menu MenuExtrasSoundSwitch 
-            Caption         =   "Sound"
+            Caption         =   "S&ound"
             Checked         =   -1  'True
             Shortcut        =   ^{F2}
          End
          Begin VB.Menu MenuExtrasBigFloatingClockSwitch 
-            Caption         =   "Big Floating Clock"
+            Caption         =   "&Big Floating Clock"
             Shortcut        =   ^{F3}
          End
          Begin VB.Menu MenuExtras1_ 
             Caption         =   "-"
          End
          Begin VB.Menu MenuExtrasRunWindowsCalculator 
-            Caption         =   "Run Windows Calculator"
+            Caption         =   "Run Windows &Calculator"
             Shortcut        =   ^{F5}
          End
          Begin VB.Menu MenuExtrasLockCurrentUser 
-            Caption         =   "Lock Current User"
+            Caption         =   "&Lock Current User"
             Shortcut        =   ^{F6}
          End
          Begin VB.Menu MenuExtrasShutDownComputer 
-            Caption         =   "Shut Down Computer"
+            Caption         =   "&Shut Down Computer..."
             Shortcut        =   ^{F7}
          End
          Begin VB.Menu MenuExtrasRestartComputer 
-            Caption         =   "Restart Computer"
+            Caption         =   "&Restart Computer..."
             Shortcut        =   ^{F8}
          End
          Begin VB.Menu MenuExtras2_ 
             Caption         =   "-"
          End
          Begin VB.Menu MenuExtrasHideMainWindow 
-            Caption         =   "Hide Main Window (Caution)"
+            Caption         =   "&Hide Main Window (Caution)"
          End
       End
       Begin VB.Menu Menu2_ 
          Caption         =   "-"
       End
       Begin VB.Menu MenuAbout 
-         Caption         =   "About"
+         Caption         =   "&About"
+         Begin VB.Menu MenuAboutUpdate 
+            Caption         =   "Check for &update manually..."
+         End
          Begin VB.Menu MenuAboutGitHub 
-            Caption         =   "GitHub @SamToki"
+            Caption         =   "GitHub @&SamToki user page..."
          End
          Begin VB.Menu MenuAboutLicense 
-            Caption         =   "Released under license GNU GPL v3"
+            Caption         =   "Released under &license GNU GPL v3..."
          End
          Begin VB.Menu MenuAboutCopyright 
             Caption         =   "TM && (C) 2015-2021 SAM TOKI STUDIO"
+            Enabled         =   0   'False
+         End
+         Begin VB.Menu MenuDate 
+            Caption         =   "2022/01/28"
+            Enabled         =   0   'False
          End
       End
    End
@@ -1271,15 +1279,15 @@ Attribute VB_Exposed = False
 '  Timer+Lottery
 '
 '  Powered by Sam Toki
-'  Version: v8.32eng
-'  Date:    2021/08/23 (Mon)
+'  Version: v8.33eng
+'  Date:    2022/01/28 (Fri)
 '  History: First version v0.10 was built on 2017/03/24.
 '
 '  WARNING: Commercial use of this computer software is strictly prohibited.
 '           Open source license:      GNU GPL v3
 '           Creative Commons license: CC BY-NC 3.0
 '
-'  Copyright: TM & (C) 2015-2021 SAM TOKI STUDIO. All rights reserved.
+'  Copyright: TM & (C) 2015-2022 SAM TOKI STUDIO. All rights reserved.
 '             SAM TOKI STUDIO is a trademark of CZJ Software Technologies (CZJST) Inc. in the P.R.C and other countries.
 '
 '  ---------------------------------------------------------------------------------------------------------------------
@@ -1380,6 +1388,12 @@ Public clockweekday As String
 Public inputnumbermode As String
 Public inputnumberdigits As Integer
 Public answer
+
+'Declare Special...
+Private Declare Function ShellExecute Lib "shell32.dll" Alias "ShellExecuteA" _
+    (ByVal hWnd As Long, ByVal lpOperation As String, ByVal lpFile As String, _
+     ByVal lpParameters As String, ByVal lpDirectory As String, ByVal nShowCmd As Long) As Long
+Private Const SW_SHOW = 5
 
 '  ---------------------------------------------------------------------------------------------------------------------
 
@@ -1546,25 +1560,25 @@ Public answer
         If timersettime = timercountdowntime Then
             CmdTimerMinInput.Enabled = True
             CmdTimerMinMinus1.Enabled = True
-            CmdTimerMinMinus10.Enabled = True
+            CmdTimerMinMinus15.Enabled = True
             CmdTimerMinPlus1.Enabled = True
-            CmdTimerMinPlus10.Enabled = True
+            CmdTimerMinPlus15.Enabled = True
             CmdTimerSecInput.Enabled = True
             CmdTimerSecMinus1.Enabled = True
-            CmdTimerSecMinus10.Enabled = True
+            CmdTimerSecMinus15.Enabled = True
             CmdTimerSecPlus1.Enabled = True
-            CmdTimerSecPlus10.Enabled = True
+            CmdTimerSecPlus15.Enabled = True
         Else
             CmdTimerMinInput.Enabled = False
             CmdTimerMinMinus1.Enabled = False
-            CmdTimerMinMinus10.Enabled = False
+            CmdTimerMinMinus15.Enabled = False
             CmdTimerMinPlus1.Enabled = False
-            CmdTimerMinPlus10.Enabled = False
+            CmdTimerMinPlus15.Enabled = False
             CmdTimerSecInput.Enabled = False
             CmdTimerSecMinus1.Enabled = False
-            CmdTimerSecMinus10.Enabled = False
+            CmdTimerSecMinus15.Enabled = False
             CmdTimerSecPlus1.Enabled = False
-            CmdTimerSecPlus10.Enabled = False
+            CmdTimerSecPlus15.Enabled = False
         End If
 
         'Timer Display
@@ -1593,17 +1607,17 @@ Public answer
         Select Case timerswitch
             Case True
                 CmdTimerStartPauseResume.Caption = "PAUSE"
-                MenuTimerStartPauseResume.Caption = "Pause"
-                FormMiniMode.CmdTimerStartPauseResume.Caption = "PAUSE"
+                MenuTimerStartPauseResume.Caption = "&Pause"
+                FormMiniMode.CmdTimerStartPauseResume.Caption = "&PAUSE"
             Case False
                 If timersettime = timercountdowntime Then
                     CmdTimerStartPauseResume.Caption = "START"
-                    MenuTimerStartPauseResume.Caption = "Start"
-                    FormMiniMode.CmdTimerStartPauseResume.Caption = "START"
+                    MenuTimerStartPauseResume.Caption = "&Start"
+                    FormMiniMode.CmdTimerStartPauseResume.Caption = "&START"
                 Else
                     CmdTimerStartPauseResume.Caption = "RESUME"
-                    MenuTimerStartPauseResume.Caption = "Resume"
-                    FormMiniMode.CmdTimerStartPauseResume.Caption = "RESUME"
+                    MenuTimerStartPauseResume.Caption = "Res&ume"
+                    FormMiniMode.CmdTimerStartPauseResume.Caption = "RES&UME"
                 End If
         End Select
 
@@ -1957,13 +1971,13 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
                 MenuExtrasSoundSwitch.Checked = False
                 ShapeLightSoundSwitch.BorderStyle = 0
                 ShapeLightSoundSwitch.FillStyle = 1
-                CmdSoundSwitch.Caption = "Sound: OFF"
+                CmdSoundSwitch.Caption = "S&ound: OFF"
             Case False
                 soundswitch = True
                 MenuExtrasSoundSwitch.Checked = True
                 ShapeLightSoundSwitch.BorderStyle = 1
                 ShapeLightSoundSwitch.FillStyle = 0
-                CmdSoundSwitch.Caption = "Sound: ON"
+                CmdSoundSwitch.Caption = "S&ound: ON"
         End Select
     End Sub
     Public Sub CmdSoundSwitch_Click()
@@ -1979,7 +1993,7 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
                 MenuExtrasBigFloatingClockSwitch.Checked = False
                 ShapeLightBigFloatingClockSwitch.BorderStyle = 0
                 ShapeLightBigFloatingClockSwitch.FillStyle = 1
-                CmdBigFloatingClockSwitch.Caption = "Big Clock: OFF"
+                CmdBigFloatingClockSwitch.Caption = "&Big Clock: OFF"
             Case False
                 bigfloatingclockswitch = True
                 FormBigFloatingClock.Move (FormSettings.HScrollBigFloatingClockPositionX.Value / 1000) * (Screen.Width - 3060), (FormSettings.VScrollBigFloatingClockPositionY.Value / 1000) * (Screen.Height - 1485), 0, 0
@@ -1990,7 +2004,7 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
                 MenuExtrasBigFloatingClockSwitch.Checked = True
                 ShapeLightBigFloatingClockSwitch.BorderStyle = 1
                 ShapeLightBigFloatingClockSwitch.FillStyle = 0
-                CmdBigFloatingClockSwitch.Caption = "Big Clock: ON"
+                CmdBigFloatingClockSwitch.Caption = "&Big Clock: ON"
         End Select
     End Sub
     Public Sub CmdBigFloatingClockSwitch_Click()
@@ -2022,7 +2036,7 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
         shutdowncountdowntimeout = 16
         FormShutdownCountdown.LabelHinttextA.Caption = "Your computer is about to shut down."
         FormShutdownCountdown.LabelHinttextB.Caption = "Please save your files in time."
-        FormShutdownCountdown.CmdOK.Caption = "Shut Down Now"
+        FormShutdownCountdown.CmdOK.Caption = "Shut Down &Now"
         FormShutdownCountdown.TimerShutdownCountdown.Enabled = True
         FormMainWindow.Enabled = False: FormMiniMode.Enabled = False
 
@@ -2041,7 +2055,7 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
         shutdowncountdowntimeout = 16
         FormShutdownCountdown.LabelHinttextA.Caption = "Your computer is about to restart."
         FormShutdownCountdown.LabelHinttextB.Caption = "Please save your files in time."
-        FormShutdownCountdown.CmdOK.Caption = "Restart Now"
+        FormShutdownCountdown.CmdOK.Caption = "Restart &Now"
         FormShutdownCountdown.TimerShutdownCountdown.Enabled = True
         FormMainWindow.Enabled = False: FormMiniMode.Enabled = False
 
@@ -2057,6 +2071,15 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
     End Sub
     Public Sub MenuExtrasHideMainWindow_Click()
         FormMainWindow.Hide
+    End Sub
+    Public Sub MenuAboutUpdate_Click()
+        Call ShellExecute(Me.hWnd, "open", "https://github.com/SamToki/VB6---Timer-Plus-Lottery", "", "", SW_SHOW)
+    End Sub
+    Public Sub MenuAboutGitHub_Click()
+        Call ShellExecute(Me.hWnd, "open", "https://github.com/SamToki", "", "", SW_SHOW)
+    End Sub
+    Public Sub MenuAboutLicense_Click()
+        Call ShellExecute(Me.hWnd, "open", "https://www.gnu.org/licenses/gpl-3.0.html", "", "", SW_SHOW)
     End Sub
 
     'CMD Adjustments...
@@ -2125,8 +2148,8 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
         FormInputNumber.Show
     End Sub
 
-    Public Sub CmdTimerMinPlus10_Click()
-        timersettime = timersettime + 600
+    Public Sub CmdTimerMinPlus15_Click()
+        timersettime = timersettime + 900
         If timersettime >= 60000 Then timersettime = 59999
         timercountdowntime = timersettime
         Call TimerTimer_Timer
@@ -2143,14 +2166,14 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
         timercountdowntime = timersettime
         Call TimerTimer_Timer
     End Sub
-    Public Sub CmdTimerMinMinus10_Click()
-        timersettime = timersettime - 600
+    Public Sub CmdTimerMinMinus15_Click()
+        timersettime = timersettime - 900
         If timersettime < 0 Then timersettime = 0
         timercountdowntime = timersettime
         Call TimerTimer_Timer
     End Sub
-    Public Sub CmdTimerSecPlus10_Click()
-        timersettime = timersettime + 10
+    Public Sub CmdTimerSecPlus15_Click()
+        timersettime = timersettime + 15
         If timersettime >= 60000 Then timersettime = 59999
         timercountdowntime = timersettime
         Call TimerTimer_Timer
@@ -2167,8 +2190,8 @@ LABEL_LotteryExecuteOnce_RANDOM_NUMBER_REGENERATE:
         timercountdowntime = timersettime
         Call TimerTimer_Timer
     End Sub
-    Public Sub CmdTimerSecMinus10_Click()
-        timersettime = timersettime - 10
+    Public Sub CmdTimerSecMinus15_Click()
+        timersettime = timersettime - 15
         If timersettime < 0 Then timersettime = 0
         timercountdowntime = timersettime
         Call TimerTimer_Timer
