@@ -1254,7 +1254,7 @@ Begin VB.Form FormMainWindow
             Caption         =   "Released under &license GNU GPL v3..."
          End
          Begin VB.Menu MenuAboutCopyright 
-            Caption         =   "TM && (C) 2015-2021 SAM TOKI STUDIO"
+            Caption         =   "TM && (C) 2015-2022 SAM TOKI STUDIO"
             Enabled         =   0   'False
          End
          Begin VB.Menu MenuDate 
