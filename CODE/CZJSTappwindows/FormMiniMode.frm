@@ -625,7 +625,7 @@ Public windowanimationtargetheight As Integer
     Public Sub TimerMiniModeResponseMonitor_Timer()
         minimoderesponsemonitorafter = FormMiniMode.LabelClockSec
         If minimoderesponsemonitorafter = minimoderesponsemonitorbefore Then
-            MsgBox "CAUTION: The Main Window of Timer+Lottery is not responding." & vbCrLf & "Fixing the problem automatically.", vbExclamation + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
+            MsgBox "The Main Window of Timer+Lottery is not responding." & vbCrLf & "Fixing the problem automatically.", vbExclamation + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
 
             FormMiniMode.Show
             FormMiniMode.windowanimationtargetleft = 0
@@ -659,7 +659,7 @@ Public windowanimationtargetheight As Integer
                 TimerMiniModeAutoHide.Enabled = True
                 CmdFix.Caption = "="
             Case Else
-                MsgBox "ERROR: Mini mode auto hide set timeout is out of range." & vbCrLf & "We would appreciate it if you can send a feedback to us so as to help solve the problem.", vbCritical + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
+                MsgBox "ERROR: Mini mode auto hide set timeout is out of range." & vbCrLf & vbCrLf & "Please send a feedback to @SamToki via GitHub so as to help solve the problem.", vbCritical + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
         End Select
         Call ExpandAtClick
     End Sub
@@ -713,7 +713,7 @@ Public windowanimationtargetheight As Integer
                 FormMainWindow.minimodeautohidetimeout = 9999
                 TimerMiniModeAutoHide.Enabled = False
             Case Else
-                MsgBox "ERROR: Mini mode auto hide set timeout is out of range." & vbCrLf & "We would appreciate it if you can send a feedback to us so as to help solve the problem.", vbCritical + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
+                MsgBox "ERROR: Mini mode auto hide set timeout is out of range." & vbCrLf & vbCrLf & "Please send a feedback to @SamToki via GitHub so as to help solve the problem.", vbCritical + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
         End Select
         'Locate position...
         windowanimationtargetleft = 0
@@ -730,7 +730,7 @@ Public windowanimationtargetheight As Integer
                 FormMainWindow.minimodeautohidetimeout = 9999
                 TimerMiniModeAutoHide.Enabled = False
             Case Else
-                MsgBox "ERROR: Mini mode auto hide set timeout is out of range." & vbCrLf & "We would appreciate it if you can send a feedback to us so as to help solve the problem.", vbCritical + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
+                MsgBox "ERROR: Mini mode auto hide set timeout is out of range." & vbCrLf & vbCrLf & "Please send a feedback to @SamToki via GitHub so as to help solve the problem.", vbCritical + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
         End Select
         'Locate position...
         windowanimationtargetleft = 0

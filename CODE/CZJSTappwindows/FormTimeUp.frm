@@ -47,7 +47,7 @@ Begin VB.Form FormTimeUp
       Caption         =   "X"
       Default         =   -1  'True
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   18
          Charset         =   0
          Weight          =   400
@@ -108,7 +108,7 @@ Begin VB.Form FormTimeUp
       BackStyle       =   0  'Transparent
       Caption         =   "Expired 0 sec."
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   18
          Charset         =   0
          Weight          =   400
@@ -142,15 +142,15 @@ Begin VB.Form FormTimeUp
       BackStyle       =   0  'Transparent
       Caption         =   "TIME UP"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   48
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H00FF9000&
+      ForeColor       =   &H00FF8000&
       Height          =   1170
       Left            =   315
       TabIndex        =   1
@@ -214,7 +214,7 @@ Public windowanimationtargetheight As Integer
     End Sub
     
     Public Sub TimerTimeUpTextBlink_Timer()
-        If LabelHinttextTimeUp.ForeColor = &HFF9000 Then LabelHinttextTimeUp.ForeColor = &HFF& Else LabelHinttextTimeUp.ForeColor = &HFF9000
+        If LabelHinttextTimeUp.ForeColor = &HFF8000 Then LabelHinttextTimeUp.ForeColor = &HE0& Else LabelHinttextTimeUp.ForeColor = &HFF8000
     End Sub
 
 '[] COMMANDS []

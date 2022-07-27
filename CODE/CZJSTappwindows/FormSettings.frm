@@ -514,7 +514,7 @@ Begin VB.Form FormSettings
       Caption         =   "X"
       Default         =   -1  'True
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   15.75
          Charset         =   0
          Weight          =   400
@@ -583,7 +583,7 @@ Begin VB.Form FormSettings
       BackStyle       =   0  'Transparent
       Caption         =   "Settings"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   24
          Charset         =   0
          Weight          =   400

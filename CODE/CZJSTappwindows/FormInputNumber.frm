@@ -34,7 +34,7 @@ Begin VB.Form FormInputNumber
       Cancel          =   -1  'True
       Caption         =   "X"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   15.75
          Charset         =   0
          Weight          =   400
@@ -63,7 +63,7 @@ Begin VB.Form FormInputNumber
    Begin VB.CommandButton CmdDelete 
       Caption         =   "&Del"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   15.75
          Charset         =   0
          Weight          =   400
@@ -83,7 +83,7 @@ Begin VB.Form FormInputNumber
       Caption         =   "&0"
       Default         =   -1  'True
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   30
          Charset         =   0
          Weight          =   400
@@ -102,7 +102,7 @@ Begin VB.Form FormInputNumber
    Begin VB.CommandButton CmdNumber9 
       Caption         =   "&9"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   30
          Charset         =   0
          Weight          =   400
@@ -121,7 +121,7 @@ Begin VB.Form FormInputNumber
    Begin VB.CommandButton CmdNumber8 
       Caption         =   "&8"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   30
          Charset         =   0
          Weight          =   400
@@ -140,7 +140,7 @@ Begin VB.Form FormInputNumber
    Begin VB.CommandButton CmdNumber7 
       Caption         =   "&7"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   30
          Charset         =   0
          Weight          =   400
@@ -159,7 +159,7 @@ Begin VB.Form FormInputNumber
    Begin VB.CommandButton CmdNumber6 
       Caption         =   "&6"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   30
          Charset         =   0
          Weight          =   400
@@ -178,7 +178,7 @@ Begin VB.Form FormInputNumber
    Begin VB.CommandButton CmdNumber5 
       Caption         =   "&5"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   30
          Charset         =   0
          Weight          =   400
@@ -197,7 +197,7 @@ Begin VB.Form FormInputNumber
    Begin VB.CommandButton CmdNumber4 
       Caption         =   "&4"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   30
          Charset         =   0
          Weight          =   400
@@ -216,7 +216,7 @@ Begin VB.Form FormInputNumber
    Begin VB.CommandButton CmdNumber3 
       Caption         =   "&3"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   30
          Charset         =   0
          Weight          =   400
@@ -235,7 +235,7 @@ Begin VB.Form FormInputNumber
    Begin VB.CommandButton CmdNumber2 
       Caption         =   "&2"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   30
          Charset         =   0
          Weight          =   400
@@ -254,7 +254,7 @@ Begin VB.Form FormInputNumber
    Begin VB.CommandButton CmdNumber1 
       Caption         =   "&1"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   30
          Charset         =   0
          Weight          =   400
@@ -276,8 +276,8 @@ Begin VB.Form FormInputNumber
       BackColor       =   &H00FFFFFF&
       Caption         =   ">"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
-         Size            =   48
+         Name            =   "Avenir"
+         Size            =   45.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -297,8 +297,8 @@ Begin VB.Form FormInputNumber
       BackColor       =   &H00FFFFFF&
       Caption         =   ">"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
-         Size            =   48
+         Name            =   "Avenir"
+         Size            =   45.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -318,8 +318,8 @@ Begin VB.Form FormInputNumber
       BackColor       =   &H00FFFFFF&
       Caption         =   ">"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
-         Size            =   48
+         Name            =   "Avenir"
+         Size            =   45.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -339,15 +339,6 @@ Begin VB.Form FormInputNumber
       BackColor       =   &H000000FF&
       BackStyle       =   0  'Transparent
       Caption         =   "Hold Alt key to enter number using keyboard"
-      BeginProperty Font 
-         Name            =   "MS Sans Serif"
-         Size            =   9.75
-         Charset         =   0
-         Weight          =   400
-         Underline       =   0   'False
-         Italic          =   0   'False
-         Strikethrough   =   0   'False
-      EndProperty
       ForeColor       =   &H00000000&
       Height          =   330
       Left            =   315
@@ -361,8 +352,8 @@ Begin VB.Form FormInputNumber
       BackColor       =   &H00FFFFFF&
       Caption         =   ">"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
-         Size            =   48
+         Name            =   "Avenir"
+         Size            =   45.75
          Charset         =   0
          Weight          =   400
          Underline       =   0   'False
@@ -673,7 +664,7 @@ Public windowanimationtargetheight As Integer
                 Call FormMainWindow.TimerTimer_Timer
             Case "TimerSec"
                 If (inputnumber1 * 10 + inputnumber2) > 59 Then
-                    MsgBox "CAUTION: Number invalid." & vbCrLf & "[Second] cannot be larger than 59.", vbExclamation + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
+                    MsgBox "Number invalid." & vbCrLf & vbCrLf & "The ""second"" cannot be larger than 59.", vbExclamation + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
                 Else
                     FormMainWindow.timersettimesec = inputnumber1 * 10 + inputnumber2
                     FormMainWindow.timersettime = FormMainWindow.timersettimemin * 60 + FormMainWindow.timersettimesec
@@ -682,10 +673,10 @@ Public windowanimationtargetheight As Integer
                 Call FormMainWindow.TimerTimer_Timer
             Case "LotteryTotal"
                 If (inputnumber1 * 1000 + inputnumber2 * 100 + inputnumber3 * 10 + inputnumber4) < FormMainWindow.lotterygroup Then
-                    MsgBox "CAUTION: Number invalid." & vbCrLf & "[Group] cannot be larger than the lottery number range.", vbExclamation + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
+                    MsgBox "Number invalid." & vbCrLf & vbCrLf & "The ""group"" cannot be larger than the lottery number range.", vbExclamation + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
                 Else
                     If (inputnumber1 * 1000 + inputnumber2 * 100 + inputnumber3 * 10 + inputnumber4) < 2 Then
-                        MsgBox "The number cannot be smaller than 2.", vbExclamation + vbOKOnly + vbDefaultButton1, "Number Invalid"
+                        MsgBox "Number invalid." & vbCrLf & vbCrLf & "The ""group"" cannot be smaller than 2.", vbExclamation + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
                     Else
                         FormMainWindow.lotterytotal = inputnumber1 * 1000 + inputnumber2 * 100 + inputnumber3 * 10 + inputnumber4
                     End If
@@ -693,10 +684,10 @@ Public windowanimationtargetheight As Integer
                 Call FormMainWindow.LotterySettingsRefresher
             Case "LotteryGroup"
                 If (inputnumber1 * 10 + inputnumber2) > FormMainWindow.lotterytotal Then
-                    MsgBox "CAUTION: Number invalid." & vbCrLf & "[Group] cannot be larger than the lottery number range.", vbExclamation + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
+                    MsgBox "Number invalid." & vbCrLf & vbCrLf & "The ""group"" cannot be larger than the lottery number range.", vbExclamation + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
                 Else
                     If (inputnumber1 * 10 + inputnumber2) < 2 Then
-                        MsgBox "CAUTION: Number invalid." & vbCrLf & "[Group] cannot be smaller than 2.", vbExclamation + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
+                        MsgBox "Number invalid." & vbCrLf & vbCrLf & "The ""group"" cannot be smaller than 2.", vbExclamation + vbOKOnly + vbDefaultButton1, "Timer+Lottery"
                     Else
                         FormMainWindow.lotterygroup = inputnumber1 * 10 + inputnumber2
                     End If

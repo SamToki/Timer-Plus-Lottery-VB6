@@ -58,10 +58,10 @@ Begin VB.Form FormBigFloatingClock
       BackStyle       =   0  'Transparent
       Caption         =   "00"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   36
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -83,10 +83,10 @@ Begin VB.Form FormBigFloatingClock
       BackStyle       =   0  'Transparent
       Caption         =   "00"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   36
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -108,10 +108,10 @@ Begin VB.Form FormBigFloatingClock
       BackStyle       =   0  'Transparent
       Caption         =   ":"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   36
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -130,10 +130,10 @@ Begin VB.Form FormBigFloatingClock
       BackStyle       =   0  'Transparent
       Caption         =   "00"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   36
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -151,10 +151,10 @@ Begin VB.Form FormBigFloatingClock
       BackStyle       =   0  'Transparent
       Caption         =   "00"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   36
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False
@@ -173,10 +173,10 @@ Begin VB.Form FormBigFloatingClock
       BackStyle       =   0  'Transparent
       Caption         =   ":"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   36
          Charset         =   0
-         Weight          =   700
+         Weight          =   400
          Underline       =   0   'False
          Italic          =   0   'False
          Strikethrough   =   0   'False

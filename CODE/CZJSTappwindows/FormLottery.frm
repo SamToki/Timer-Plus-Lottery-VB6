@@ -36,7 +36,7 @@ Begin VB.Form FormLottery
       Caption         =   "X"
       Default         =   -1  'True
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   24
          Charset         =   0
          Weight          =   400
@@ -93,7 +93,7 @@ Begin VB.Form FormLottery
          BackStyle       =   0  'Transparent
          Caption         =   "ScrText Abg"
          BeginProperty Font 
-            Name            =   "Avenir Next LT Pro"
+            Name            =   "Avenir"
             Size            =   111.75
             Charset         =   0
             Weight          =   400
@@ -115,7 +115,7 @@ Begin VB.Form FormLottery
       BackStyle       =   0  'Transparent
       Caption         =   "HintText Abg"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   48
          Charset         =   0
          Weight          =   400

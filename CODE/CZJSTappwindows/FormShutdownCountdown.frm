@@ -41,7 +41,7 @@ Begin VB.Form FormShutdownCountdown
       Caption         =   "X"
       Default         =   -1  'True
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   18
          Charset         =   0
          Weight          =   400
@@ -60,7 +60,7 @@ Begin VB.Form FormShutdownCountdown
    Begin VB.CommandButton CmdOK 
       Caption         =   "Shut Down &Now (30)"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   18
          Charset         =   0
          Weight          =   400
@@ -121,7 +121,7 @@ Begin VB.Form FormShutdownCountdown
       BackStyle       =   0  'Transparent
       Caption         =   "HintTextB Abg"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   21.75
          Charset         =   0
          Weight          =   400
@@ -129,7 +129,7 @@ Begin VB.Form FormShutdownCountdown
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H000000D0&
+      ForeColor       =   &H000000E0&
       Height          =   540
       Left            =   315
       TabIndex        =   2
@@ -154,7 +154,7 @@ Begin VB.Form FormShutdownCountdown
       BackStyle       =   0  'Transparent
       Caption         =   "HintTextA Abg"
       BeginProperty Font 
-         Name            =   "Avenir Next LT Pro"
+         Name            =   "Avenir"
          Size            =   21.75
          Charset         =   0
          Weight          =   400
@@ -162,7 +162,7 @@ Begin VB.Form FormShutdownCountdown
          Italic          =   0   'False
          Strikethrough   =   0   'False
       EndProperty
-      ForeColor       =   &H000000D0&
+      ForeColor       =   &H000000E0&
       Height          =   540
       Left            =   315
       TabIndex        =   1

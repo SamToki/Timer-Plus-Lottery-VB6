@@ -165,7 +165,7 @@ Begin VB.Form FormMainWindow
       Begin VB.CommandButton CmdTimerClear 
          Caption         =   "CLEAR"
          BeginProperty Font 
-            Name            =   "Avenir Next LT Pro"
+            Name            =   "Avenir"
             Size            =   18
             Charset         =   0
             Weight          =   400
@@ -184,7 +184,7 @@ Begin VB.Form FormMainWindow
       Begin VB.CommandButton CmdTimerReset 
          Caption         =   "RESET"
          BeginProperty Font 
-            Name            =   "Avenir Next LT Pro"
+            Name            =   "Avenir"
             Size            =   18
             Charset         =   0
             Weight          =   400
@@ -203,7 +203,7 @@ Begin VB.Form FormMainWindow
       Begin VB.CommandButton CmdTimerStartPauseResume 
          Caption         =   "START"
          BeginProperty Font 
-            Name            =   "Avenir Next LT Pro"
+            Name            =   "Avenir"
             Size            =   18
             Charset         =   0
             Weight          =   400
@@ -398,10 +398,10 @@ Begin VB.Form FormMainWindow
          BackStyle       =   0  'Transparent
          Caption         =   ":"
          BeginProperty Font 
-            Name            =   "Avenir Next LT Pro"
+            Name            =   "Avenir"
             Size            =   63.75
             Charset         =   0
-            Weight          =   700
+            Weight          =   400
             Underline       =   0   'False
             Italic          =   0   'False
             Strikethrough   =   0   'False
@@ -419,7 +419,7 @@ Begin VB.Form FormMainWindow
          BackStyle       =   0  'Transparent
          Caption         =   "00"
          BeginProperty Font 
-            Name            =   "Avenir Next LT Pro"
+            Name            =   "Avenir"
             Size            =   63.75
             Charset         =   0
             Weight          =   400
@@ -441,7 +441,7 @@ Begin VB.Form FormMainWindow
          BackStyle       =   0  'Transparent
          Caption         =   "0"
          BeginProperty Font 
-            Name            =   "Avenir Next LT Pro"
+            Name            =   "Avenir"
             Size            =   63.75
             Charset         =   0
             Weight          =   400
@@ -512,7 +512,7 @@ Begin VB.Form FormMainWindow
       Begin VB.CommandButton CmdLotteryRepeatTenTimes 
          Caption         =   "REPEAT TEN TIMES"
          BeginProperty Font 
-            Name            =   "Avenir Next LT Pro"
+            Name            =   "Avenir"
             Size            =   18
             Charset         =   0
             Weight          =   400
@@ -532,7 +532,7 @@ Begin VB.Form FormMainWindow
          Caption         =   "START LOTTERY..."
          Default         =   -1  'True
          BeginProperty Font 
-            Name            =   "Avenir Next LT Pro"
+            Name            =   "Avenir"
             Size            =   18
             Charset         =   0
             Weight          =   400
@@ -1261,7 +1261,7 @@ Begin VB.Form FormMainWindow
             Enabled         =   0   'False
          End
          Begin VB.Menu MenuAboutDate 
-            Caption         =   "2022/01/28"
+            Caption         =   "2022/07/28"
             Enabled         =   0   'False
          End
       End
